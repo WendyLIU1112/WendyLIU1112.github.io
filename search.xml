@@ -8,7 +8,7 @@
       <link href="/2019/11/12/%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/"/>
       <url>/2019/11/12/%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/</url>
       
-        <content type="html"><![CDATA[<p>在当前精准医疗的要求下，针对每个病人的信息使用不同的治疗方案，找到最优的ITR（individiualized treatment rule）非常重要。主要思想是基于个体信息（临床协变量、基因等），最大化每个人的outcome（如事件时间、健康指标、疾病指标）。</p><h1 id="框架"><a href="#框架" class="headerlink" title="框架"></a>框架</h1><p>母鸡</p><p>#分类</p><p>##基于模型</p><p>##基于分类</p><p>##直接搜索</p><p>##直接学习</p>]]></content>
+        <content type="html"><![CDATA[<p>在当前精准医疗的要求下，针对每个病人的信息使用不同的治疗方案，找到最优的ITR（individiualized treatment rule）非常重要。主要思想是基于个体信息（临床协变量、基因等），最大化每个人的outcome（如事件时间、健康指标、疾病指标）。</p><h1 id="框架"><a href="#框架" class="headerlink" title="框架"></a>框架</h1><p>母鸡</p><h1 id="分类"><a href="#分类" class="headerlink" title="分类"></a>分类</h1><h2 id="基于模型"><a href="#基于模型" class="headerlink" title="基于模型"></a>基于模型</h2><h2 id="基于分类"><a href="#基于分类" class="headerlink" title="基于分类"></a>基于分类</h2><h2 id="直接搜索"><a href="#直接搜索" class="headerlink" title="直接搜索"></a>直接搜索</h2><h2 id="直接学习"><a href="#直接学习" class="headerlink" title="直接学习"></a>直接学习</h2>]]></content>
       
       
       
