@@ -8,15 +8,15 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>估计最优ITR的方法 | Wendy的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="在当前精准医疗的要求下，针对每个病人的信息使用不同的治疗方案，找到最优的ITR（individiualized treatment rule）非常重要。主要思想是基于个体信息（临床协变量、基因等），最大化每个人的outcome（如事件时间、健康指标、疾病指标）。 框架相关数据三元随机向量$(\mathbf{x}, A, R)$其中，协变量： $\mathbf{x}=\left(1, X_{1},">
+  <meta name="description" content="在当前精准医疗的要求下，针对每个病人的信息使用不同的治疗方案，找到最优的ITR（individiualized treatment rule）非常重要。主要思想是基于个体信息（临床协变量、基因等），最大化每个人的outcome（如事件时间、健康指标、疾病指标）。">
 <meta name="keywords" content="因果推断">
 <meta property="og:type" content="article">
 <meta property="og:title" content="估计最优ITR的方法">
 <meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;12&#x2F;%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0&#x2F;index.html">
 <meta property="og:site_name" content="Wendy的博客">
-<meta property="og:description" content="在当前精准医疗的要求下，针对每个病人的信息使用不同的治疗方案，找到最优的ITR（individiualized treatment rule）非常重要。主要思想是基于个体信息（临床协变量、基因等），最大化每个人的outcome（如事件时间、健康指标、疾病指标）。 框架相关数据三元随机向量$(\mathbf{x}, A, R)$其中，协变量： $\mathbf{x}=\left(1, X_{1},">
+<meta property="og:description" content="在当前精准医疗的要求下，针对每个病人的信息使用不同的治疗方案，找到最优的ITR（individiualized treatment rule）非常重要。主要思想是基于个体信息（临床协变量、基因等），最大化每个人的outcome（如事件时间、健康指标、疾病指标）。">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-11-13T10:52:58.280Z">
+<meta property="og:updated_time" content="2019-11-13T12:49:53.457Z">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="Wendy的博客" type="application/atom+xml">
@@ -175,6 +175,7 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>在当前精准医疗的要求下，针对每个病人的信息使用不同的治疗方案，找到最优的ITR（individiualized treatment rule）非常重要。主要思想是基于个体信息（临床协变量、基因等），最大化每个人的outcome（如事件时间、健康指标、疾病指标）。</p>
+<a id="more"></a>
 <h1 id="框架"><a href="#框架" class="headerlink" title="框架"></a>框架</h1><h2 id="相关数据"><a href="#相关数据" class="headerlink" title="相关数据"></a>相关数据</h2><p>三元随机向量$(\mathbf{x}, A, R)$<br>其中，协变量： $\mathbf{x}=\left(1, X_{1}, \cdots, X_{p}\right) \in \mathcal{X}$<br>&emsp;&emsp;&emsp;治疗方案：$A \in\{1,2, \cdots, K\}$<br>&emsp;&emsp;&emsp;治疗效果：$R$。    假设$R$有界，且$R$越大代表治疗效果越好。</p>
 <p> 决策函数 (ITR)： $d(\mathbf{x}): \mathcal{X} \rightarrow \mathcal{A}$</p>
 <h2 id="Target"><a href="#Target" class="headerlink" title="Target"></a>Target</h2><p>$V(d) \triangleq E^{d}(R)=\int R d P^{d}=\int R \frac{d P^{d}}{d P} d P=E\left[\frac{1_{A=d(\mathbf{x})}}{p(A | \mathbf{x})} R\right]$<br>其中，$P$：$(\mathbf{x}, A, R)$的分布<br>&emsp;&emsp;&emsp;$P^{d}$：$d$指定治疗方案下，$(\mathbf{x}, A, R)$的分布</p>
@@ -300,18 +301,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/11/12/%E7%AC%AC2%E7%AF%87%E6%96%87%E7%AB%A0/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          因果推断
-        
-      </div>
-    </a>
   
-  
-    <a href="/2019/11/10/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Hello World</div>
+    <a href="/2019/11/12/3/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">抽样</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -330,6 +322,19 @@
             </div>
         </div>
         
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#框架"><span class="toc-number">1.</span> <span class="toc-text">框架</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#相关数据"><span class="toc-number">1.1.</span> <span class="toc-text">相关数据</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Target"><span class="toc-number">1.2.</span> <span class="toc-text">Target</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#分类"><span class="toc-number">2.</span> <span class="toc-text">分类</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#基于模型"><span class="toc-number">2.1.</span> <span class="toc-text">基于模型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#基于分类"><span class="toc-number">2.2.</span> <span class="toc-text">基于分类</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#直接学习"><span class="toc-number">2.3.</span> <span class="toc-text">直接学习</span></a></li></ol></li></ol>
+                    </div>
+                </span>
+            </div>
+        </div>
         
     </div>
 </aside>
