@@ -6,17 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>抽样 | Wendy的博客</title>
+  <title>估计最优ITR的方法 | Wendy的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="在当前精准医疗的要求下，针对每个病人的信息使用不同的治疗方案，找到最优的ITR（individiualized treatment rule）非常重要。主要思想是基于个体信息（临床协变量、基因等），最大化每个人的outcome（如事件时间、健康指标、疾病指标）。">
-<meta name="keywords" content="statistics">
+<meta name="keywords" content="因果推断">
 <meta property="og:type" content="article">
-<meta property="og:title" content="抽样">
-<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;12&#x2F;3&#x2F;index.html">
+<meta property="og:title" content="估计最优ITR的方法">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;12&#x2F;%E4%BC%B0%E8%AE%A1%E6%9C%80%E4%BC%98ITR&#x2F;index.html">
 <meta property="og:site_name" content="Wendy的博客">
 <meta property="og:description" content="在当前精准医疗的要求下，针对每个病人的信息使用不同的治疗方案，找到最优的ITR（individiualized treatment rule）非常重要。主要思想是基于个体信息（临床协变量、基因等），最大化每个人的outcome（如事件时间、健康指标、疾病指标）。">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-11-12T08:46:35.315Z">
+<meta property="og:updated_time" content="2019-11-13T13:35:37.299Z">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="Wendy的博客" type="application/atom+xml">
@@ -154,19 +154,19 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-3" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-估计最优ITR" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      抽样
+      估计最优ITR的方法
     </h1>
   
 
         
-        <a href="/2019/11/12/3/" class="archive-article-date">
+        <a href="/2019/11/12/%E4%BC%B0%E8%AE%A1%E6%9C%80%E4%BC%98ITR/" class="archive-article-date">
   	<time datetime="2019-11-12T08:02:05.868Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-12</time>
 </a>
         
@@ -176,8 +176,18 @@
       
         <p>在当前精准医疗的要求下，针对每个病人的信息使用不同的治疗方案，找到最优的ITR（individiualized treatment rule）非常重要。主要思想是基于个体信息（临床协变量、基因等），最大化每个人的outcome（如事件时间、健康指标、疾病指标）。</p>
 <a id="more"></a>
-<h1 id="框架"><a href="#框架" class="headerlink" title="框架"></a>框架</h1><p>母鸡</p>
-<h1 id="分类"><a href="#分类" class="headerlink" title="分类"></a>分类</h1><h2 id="基于模型"><a href="#基于模型" class="headerlink" title="基于模型"></a>基于模型</h2><h2 id="基于分类"><a href="#基于分类" class="headerlink" title="基于分类"></a>基于分类</h2><h2 id="直接搜索"><a href="#直接搜索" class="headerlink" title="直接搜索"></a>直接搜索</h2><h2 id="直接学习"><a href="#直接学习" class="headerlink" title="直接学习"></a>直接学习</h2>
+<h1 id="框架"><a href="#框架" class="headerlink" title="框架"></a>框架</h1><h2 id="相关数据"><a href="#相关数据" class="headerlink" title="相关数据"></a>相关数据</h2><p>三元随机向量$(\mathbf{x}, A, R)$<br>其中，协变量： $\mathbf{x}=\left(1, X_{1}, \cdots, X_{p}\right) \in \mathcal{X}$<br>&emsp;&emsp;&emsp;治疗方案：$A \in\{1,2, \cdots, K\}$<br>&emsp;&emsp;&emsp;治疗效果：$R$。    假设$R$有界，且$R$越大代表治疗效果越好。</p>
+<p> 决策函数 (ITR)： $d(\mathbf{x}): \mathcal{X} \rightarrow \mathcal{A}$</p>
+<h2 id="Target"><a href="#Target" class="headerlink" title="Target"></a>Target</h2><p>$V(d) \triangleq E^{d}(R)=\int R d P^{d}=\int R \frac{d P^{d}}{d P} d P=E\left[\frac{1_{A=d(\mathbf{x})}}{p(A | \mathbf{x})} R\right]$<br>其中，$P$：$(\mathbf{x}, A, R)$的分布<br>&emsp;&emsp;&emsp;$P^{d}$：$d$指定治疗方案下，$(\mathbf{x}, A, R)$的分布</p>
+<p>最优 ITR：$d_{0} \in \arg \max _{d \in \mathcal{A}} V(d)$</p>
+<h1 id="分类"><a href="#分类" class="headerlink" title="分类"></a>分类</h1><h2 id="基于模型"><a href="#基于模型" class="headerlink" title="基于模型"></a>基于模型</h2><ol>
+<li>Q learning<br>对基于协变量的条件结果函数建模</li>
+</ol>
+<ol>
+<li>A learning<br>对不同治疗结果的对比函数建模</li>
+</ol>
+<h2 id="基于分类"><a href="#基于分类" class="headerlink" title="基于分类"></a>基于分类</h2><p>将最优ITR问题转化为加权分类问题，便于使用机器学习技术做估计。</p>
+<h2 id="直接学习"><a href="#直接学习" class="headerlink" title="直接学习"></a>直接学习</h2>
       
 
       
@@ -216,6 +226,17 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag article-tag-list-link color5">因果推断</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -266,7 +287,7 @@
     <a class="close js-modal-close" href="javascript:;" target="_blank" rel="noopener"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAK4AAACuCAAAAACKZ2kyAAABx0lEQVR42u3aQW4DIQwF0Nz/0tNtpbTk2x7oqHqsomRgHllY2Ob1isf1Nr5/v571vkIydzRwcXHH3Gs51i9OZq3n5gZcXNzz3CQM/fb8ZHu5ARcX98ncNWK9Mi4u7v/jVtOVJLTh4uI+mVtNY5Lvk+POxlwNFxd3wJ2HpPnnLfVdXFzcFvcqjiTtmazwYS4uLu4R7qSgmT+TJ1pRCoSLi3uEe9fFi2oZpVpmxcXFPcmdBKnJVYzenStcXNzd3KQMWi2G9o4vUXKFi4t7hNs7oFQPJfnnQisFFxd3Mze5GJFfpMiLqknbpvy/4uLijrk5K99M73pWlDLh4uIe4c6Tk/l9iXJChYuLe4Sbl0Lu2lIetj6kQLi4uNu4vXZI7/lmp3cSHXFxcVvcQgOjdd0qD3zJJnFxcc9wJ5Mnv1YvduDi4p7n9k4XhUhZXL/7My4u7pR7FUce+KoN3SgI4uLiHuFOqhC9tkrSfM0Ltbi4uPu48+CVJzPVxOmHNXFxcQ9y58eR6sby5KpQhcXFxf0j7l3lkma4xMXFfTy3dzCqJkujIw4uLu6AW31xXuBIVi5c7MDFxT3C7TU+e62Uanl0VN/FxcXtcL8AQ3WQn48x2ywAAAAASUVORK5CYII=" alt="微信分享二维码">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACsklEQVR42u3a20oEMRAFwP3/n1bwSZCMpy9hFSpPyzjOpkZI4ul+veLx8TWef/p9PP/WzztP15OnLQw8PDy81tRPI5lQ/vn5yvP103xO9+Dh4eHd5j1vBskSn3xZvnlM5oOHh4f3d3j5wt2bUHVjwMPDw/u/vAnmeBQePx8PDw/vNi8JI3rT7V1PPi9nLXh4eHgxbxIEvOvzxfoeHh4e3qCq3otlJ4t+cn9hnnh4eHgXeNWAYGsXmsMK5TQ8PDy8C7y8+NRrq6q+vmTS5RgCDw8Pb4mXLLX5ATq/Un1+75iOh4eHd4M3CW3zx20VyeaNCHh4eHhbvHnEUG3P6rUC9DYkPDw8vHu8rZJVEh/kEcN8y8HDw8Pb5U2OsMmW0Htl8zhjlLXg4eHhxbxmblE87E6O0WU8Hh4e3gVevsgm4F5pqhdkFA7ieHh4eKu83vLdK/P3YtmcHf3d8PDw8Ma83rK+dWe1rap31MbDw8Pb5eXLd/Xg+/zM3TD3+F14eHh4l3l5OPs83V5U0dsYfnkpeHh4eBd4edNVr0GqWmDrFd6ilBoPDw9viZccqfOAtTetaitq/gQ8PDy827xqM9NHcVRfbrVsFoUReHh4eGNeVHRvBRPN/q9iQ0D0CvDw8PBWeXl5KW8e3W076DWHvarVMzw8PLzx/+/V64VyVOu3em0HeHh4eDd4vbCgd/ieNB9UWwfw8PDw7vHysdUckAccu/PEw8PD2+LNS1C9QLa3FeUlMTw8PLx7vMnG0GsR6B3oq/EEHh4e3m1evhnki3u1DNYLR6K54eHh4V3jJRPNA9Zy5W2cmhxfDR4eHt6f4VUbSatRb/WofXwaHh4e3lt5heW4GPhOwouoPwIPDw/vAq+6iPfuqbYOVGPi48aAh4eHt8qrRgPz5X4r2liA4eHh4dV4n2c4AyeiXMBUAAAAAElFTkSuQmCC" alt="微信分享二维码">
     </div>
 </div>
 
@@ -279,6 +300,15 @@
 
   
 <nav id="article-nav">
+  
+    <a href="/2019/11/12/%E6%8A%BD%E6%A0%B7/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          抽样
+        
+      </div>
+    </a>
   
   
     <a href="/2019/11/12/%E7%AC%AC2%E7%AF%87%E6%96%87%E7%AB%A0/" id="article-nav-older" class="article-nav-link-wrap">
@@ -301,6 +331,19 @@
             </div>
         </div>
         
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#框架"><span class="toc-number">1.</span> <span class="toc-text">框架</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#相关数据"><span class="toc-number">1.1.</span> <span class="toc-text">相关数据</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Target"><span class="toc-number">1.2.</span> <span class="toc-text">Target</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#分类"><span class="toc-number">2.</span> <span class="toc-text">分类</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#基于模型"><span class="toc-number">2.1.</span> <span class="toc-text">基于模型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#基于分类"><span class="toc-number">2.2.</span> <span class="toc-text">基于分类</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#直接学习"><span class="toc-number">2.3.</span> <span class="toc-text">直接学习</span></a></li></ol></li></ol>
+                    </div>
+                </span>
+            </div>
+        </div>
         
     </div>
 </aside>
