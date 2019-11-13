@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-11-13T12:49:53.457Z</updated>
+  <updated>2019-11-12T08:46:35.315Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,27 +15,6 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>估计最优ITR的方法</title>
-    <link href="http://yoursite.com/2019/11/12/%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/"/>
-    <id>http://yoursite.com/2019/11/12/%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/</id>
-    <published>2019-11-12T08:02:05.868Z</published>
-    <updated>2019-11-13T12:49:53.457Z</updated>
-    
-    <content type="html"><![CDATA[<p>在当前精准医疗的要求下，针对每个病人的信息使用不同的治疗方案，找到最优的ITR（individiualized treatment rule）非常重要。主要思想是基于个体信息（临床协变量、基因等），最大化每个人的outcome（如事件时间、健康指标、疾病指标）。</p><a id="more"></a><h1 id="框架"><a href="#框架" class="headerlink" title="框架"></a>框架</h1><h2 id="相关数据"><a href="#相关数据" class="headerlink" title="相关数据"></a>相关数据</h2><p>三元随机向量$(\mathbf{x}, A, R)$<br>其中，协变量： $\mathbf{x}=\left(1, X_{1}, \cdots, X_{p}\right) \in \mathcal{X}$<br>&emsp;&emsp;&emsp;治疗方案：$A \in\{1,2, \cdots, K\}$<br>&emsp;&emsp;&emsp;治疗效果：$R$。    假设$R$有界，且$R$越大代表治疗效果越好。</p><p> 决策函数 (ITR)： $d(\mathbf{x}): \mathcal{X} \rightarrow \mathcal{A}$</p><h2 id="Target"><a href="#Target" class="headerlink" title="Target"></a>Target</h2><p>$V(d) \triangleq E^{d}(R)=\int R d P^{d}=\int R \frac{d P^{d}}{d P} d P=E\left[\frac{1_{A=d(\mathbf{x})}}{p(A | \mathbf{x})} R\right]$<br>其中，$P$：$(\mathbf{x}, A, R)$的分布<br>&emsp;&emsp;&emsp;$P^{d}$：$d$指定治疗方案下，$(\mathbf{x}, A, R)$的分布</p><p>optimal ITR：$d_{0} \in \arg \max _{d \in \mathcal{A}} V(d)$</p><h1 id="分类"><a href="#分类" class="headerlink" title="分类"></a>分类</h1><h2 id="基于模型"><a href="#基于模型" class="headerlink" title="基于模型"></a>基于模型</h2><ol><li>Q learning<br>对基于协变量的条件结果函数建模</li></ol><ol><li>A learning<br>对不同治疗结果的对比函数建模</li></ol><h2 id="基于分类"><a href="#基于分类" class="headerlink" title="基于分类"></a>基于分类</h2><p>将最优ITR问题转化为加权分类问题，便于使用机器学习技术做估计。</p><h2 id="直接学习"><a href="#直接学习" class="headerlink" title="直接学习"></a>直接学习</h2>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;在当前精准医疗的要求下，针对每个病人的信息使用不同的治疗方案，找到最优的ITR（individiualized treatment rule）非常重要。主要思想是基于个体信息（临床协变量、基因等），最大化每个人的outcome（如事件时间、健康指标、疾病指标）。&lt;/p&gt;
-    
-    </summary>
-    
-    
-    
-      <category term="因果推断" scheme="http://yoursite.com/tags/%E5%9B%A0%E6%9E%9C%E6%8E%A8%E6%96%AD/"/>
-    
-  </entry>
   
   <entry>
     <title>抽样</title>
@@ -76,6 +55,27 @@
     </summary>
     
     
+    
+  </entry>
+  
+  <entry>
+    <title>估计最优ITR的方法</title>
+    <link href="http://yoursite.com/2019/11/12/%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/"/>
+    <id>http://yoursite.com/2019/11/12/%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/</id>
+    <published>2019-11-12T08:02:05.868Z</published>
+    <updated>2019-11-13T12:49:53.457Z</updated>
+    
+    <content type="html"><![CDATA[<p>在当前精准医疗的要求下，针对每个病人的信息使用不同的治疗方案，找到最优的ITR（individiualized treatment rule）非常重要。主要思想是基于个体信息（临床协变量、基因等），最大化每个人的outcome（如事件时间、健康指标、疾病指标）。</p><a id="more"></a><h1 id="框架"><a href="#框架" class="headerlink" title="框架"></a>框架</h1><h2 id="相关数据"><a href="#相关数据" class="headerlink" title="相关数据"></a>相关数据</h2><p>三元随机向量$(\mathbf{x}, A, R)$<br>其中，协变量： $\mathbf{x}=\left(1, X_{1}, \cdots, X_{p}\right) \in \mathcal{X}$<br>&emsp;&emsp;&emsp;治疗方案：$A \in\{1,2, \cdots, K\}$<br>&emsp;&emsp;&emsp;治疗效果：$R$。    假设$R$有界，且$R$越大代表治疗效果越好。</p><p> 决策函数 (ITR)： $d(\mathbf{x}): \mathcal{X} \rightarrow \mathcal{A}$</p><h2 id="Target"><a href="#Target" class="headerlink" title="Target"></a>Target</h2><p>$V(d) \triangleq E^{d}(R)=\int R d P^{d}=\int R \frac{d P^{d}}{d P} d P=E\left[\frac{1_{A=d(\mathbf{x})}}{p(A | \mathbf{x})} R\right]$<br>其中，$P$：$(\mathbf{x}, A, R)$的分布<br>&emsp;&emsp;&emsp;$P^{d}$：$d$指定治疗方案下，$(\mathbf{x}, A, R)$的分布</p><p>optimal ITR：$d_{0} \in \arg \max _{d \in \mathcal{A}} V(d)$</p><h1 id="分类"><a href="#分类" class="headerlink" title="分类"></a>分类</h1><h2 id="基于模型"><a href="#基于模型" class="headerlink" title="基于模型"></a>基于模型</h2><ol><li>Q learning<br>对基于协变量的条件结果函数建模</li></ol><ol><li>A learning<br>对不同治疗结果的对比函数建模</li></ol><h2 id="基于分类"><a href="#基于分类" class="headerlink" title="基于分类"></a>基于分类</h2><p>将最优ITR问题转化为加权分类问题，便于使用机器学习技术做估计。</p><h2 id="直接学习"><a href="#直接学习" class="headerlink" title="直接学习"></a>直接学习</h2>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;在当前精准医疗的要求下，针对每个病人的信息使用不同的治疗方案，找到最优的ITR（individiualized treatment rule）非常重要。主要思想是基于个体信息（临床协变量、基因等），最大化每个人的outcome（如事件时间、健康指标、疾病指标）。&lt;/p&gt;
+    
+    </summary>
+    
+    
+    
+      <category term="因果推断" scheme="http://yoursite.com/tags/%E5%9B%A0%E6%9E%9C%E6%8E%A8%E6%96%AD/"/>
     
   </entry>
   
