@@ -8,16 +8,16 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>【文献综述】估计最优ITR的方法 | Wendy的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="由于许多疾病和不同患者对治疗的反应均不相同，因此有必要对患者进行个体化治疗（即精准医疗）。个性化治疗规则（individiualized treatment rule，ITR）是根据患者特征推荐治疗的决策规则。在当前精准医疗的要求下，针对每个病人的信息使用不同的治疗方案，推荐最优ITR非常重要。主要思想是基于个体信息（如临床协变量、基因等），最大化群体平均的outcome（如事件发生时间、健康指标">
+  <meta name="description" content="由于许多疾病和不同患者对治疗的反应均不相同，因此有必要对患者进行个体化治疗（即精准医疗）。个性化治疗规则（individiualized treatment rule，ITR）是根据患者特征推荐治疗的决策规则。在当前精准医疗的要求下，针对每个病">
 <meta name="keywords" content="因果推断">
 <meta property="og:type" content="article">
 <meta property="og:title" content="【文献综述】估计最优ITR的方法">
 <meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;12&#x2F;%E4%BC%B0%E8%AE%A1%E6%9C%80%E4%BC%98ITR&#x2F;index.html">
 <meta property="og:site_name" content="Wendy的博客">
-<meta property="og:description" content="由于许多疾病和不同患者对治疗的反应均不相同，因此有必要对患者进行个体化治疗（即精准医疗）。个性化治疗规则（individiualized treatment rule，ITR）是根据患者特征推荐治疗的决策规则。在当前精准医疗的要求下，针对每个病人的信息使用不同的治疗方案，推荐最优ITR非常重要。主要思想是基于个体信息（如临床协变量、基因等），最大化群体平均的outcome（如事件发生时间、健康指标">
+<meta property="og:description" content="由于许多疾病和不同患者对治疗的反应均不相同，因此有必要对患者进行个体化治疗（即精准医疗）。个性化治疗规则（individiualized treatment rule，ITR）是根据患者特征推荐治疗的决策规则。在当前精准医疗的要求下，针对每个病">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https:&#x2F;&#x2F;img-blog.csdnimg.cn&#x2F;20191120172028936.png?x-oss-process=image&#x2F;watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MTEzNTc4Ng==,size_16,color_FFFFFF,t_70">
-<meta property="og:updated_time" content="2019-12-26T11:52:34.598Z">
+<meta property="og:updated_time" content="2019-12-26T11:55:52.263Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https:&#x2F;&#x2F;img-blog.csdnimg.cn&#x2F;20191120172028936.png?x-oss-process=image&#x2F;watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MTEzNTc4Ng==,size_16,color_FFFFFF,t_70">
   
@@ -180,9 +180,8 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>由于许多疾病和不同患者对治疗的反应均不相同，因此有必要对患者进行个体化治疗（即精准医疗）。<strong>个性化治疗规则</strong>（individiualized treatment rule，<strong>ITR</strong>）是根据患者特征推荐治疗的决策规则。在当前<strong>精准医疗</strong>的要求下，针对每个病人的信息使用不同的治疗方案，推荐<strong>最优ITR</strong>非常重要。主要思想是基于个体信息（如临床协变量、基因等），最大化群体平均的outcome（如事件发生时间、健康指标、疾病指标等）。</p>
+        <p>由于许多疾病和不同患者对治疗的反应均不相同，因此有必要对患者进行个体化治疗（即精准医疗）。<strong>个性化治疗规则</strong>（individiualized treatment rule，<strong>ITR</strong>）是根据患者特征推荐治疗的决策规则。在当前<strong>精准医疗</strong>的要求下，针对每个病<br><a id="more"></a><br>人的信息使用不同的治疗方案，推荐<strong>最优ITR</strong>非常重要。主要思想是基于个体信息（如临床协变量、基因等），最大化群体平均的outcome（如事件发生时间、健康指标、疾病指标等）。</p>
 <p>这里作为入门，介绍了当前估计optimal ITR的框架与几种主要方法。</p>
-<a id="more"></a>
 <h1 id="框架"><a href="#框架" class="headerlink" title="框架"></a>框架</h1><h2 id="相关数据"><a href="#相关数据" class="headerlink" title="相关数据"></a>相关数据</h2><p>三元随机向量 $(\mathbf{x}, A, R)$<br>其中，协变量： $\mathbf{x}=\left(1, X_{1}, \cdots, X_{p}\right) \in \mathcal{X}$<br>&emsp;&emsp;&emsp;治疗方案(treatment)：$A \in\{1,2, \cdots, K\}$<br>&emsp;&emsp;&emsp;治疗效果(outcome)：$R$。    假设$R$有界，且$R$越大代表治疗效果越好。</p>
 <p>先验概率分布 $\pi(a, x)=P[A=a|\mathbf{x}=x]$ 已知（未知时可用多项logistic回归近似）。并假设对于所有$a\in\mathcal{A}$ ， $\pi(a,x)&gt;0$ a.s。</p>
 <p>样本 $\left\{\left(\mathbf{x}_{i}, A_{i}, R_{i}\right), i=1, \cdots, n\right\}$ i.i.d </p>
@@ -344,20 +343,15 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/11/12/r%E5%8C%85%E9%97%AE%E9%A2%98/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2019/11/12/%E6%8A%BD%E6%A0%B7/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          写R包可能出现的问题
+          抽样
         
       </div>
     </a>
   
-  
-    <a href="/2019/11/12/%E6%8A%BD%E6%A0%B7/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">抽样</div>
-      <i class="icon-circle-right"></i>
-    </a>
   
 </nav>
 
