@@ -178,6 +178,34 @@
         
       </header>
     
+<!-- 目录内容 -->
+
+    <p class="show-toc-btn" id="show-toc-btn" onclick="showToc();" style="display:none">
+          <span class="btn-bg"></span>
+          <span class="btn-text">文章导航</span>
+          </p>
+	<div id="toc-article" class="toc-article">
+	    <span id="toc-close" class="toc-close" title="隐藏导航" onclick="showBtn();">×</span>
+		<strong class="toc-title">文章目录</strong>
+           <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-document（）后显示未加载包"><span class="toc-number">1.</span> <span class="toc-text">1. document（）后显示未加载包</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-document（）后显示namespace不是由roxygen2生成的"><span class="toc-number">2.</span> <span class="toc-text">2. document（）后显示namespace不是由roxygen2生成的</span></a></li></ol>
+         </div>
+   <script type="text/javascript">
+	function showToc(){
+		var toc_article = document.getElementById("toc-article");
+		var show_toc_btn = document.getElementById("show-toc-btn");
+		toc_article.setAttribute("style","display:block");
+		show_toc_btn.setAttribute("style","display:none");
+		};
+	function showBtn(){
+		var toc_article = document.getElementById("toc-article");
+		var show_toc_btn = document.getElementById("show-toc-btn");
+		toc_article.setAttribute("style","display:none");
+		show_toc_btn.setAttribute("style","display:block");
+		};
+   </script>
+      
+<!-- 目录内容结束 -->
+
     <div class="article-entry" itemprop="articleBody">
       
         <p>最近学习写R包，参考博客：<a href="https://www.bioinfo-scrounger.com/archives/546/" target="_blank" rel="noopener">如何快速写一个R包</a>。根据该博客教程写R包非常简单，补充我遇到的两个小问题。</p>
@@ -299,6 +327,15 @@
 
   
 <nav id="article-nav">
+  
+    <a href="/2019/11/12/%E4%BC%B0%E8%AE%A1%E6%9C%80%E4%BC%98ITR/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          【文献综述】估计最优ITR的方法
+        
+      </div>
+    </a>
   
   
     <a href="/2019/11/12/%E6%8A%BD%E6%A0%B7/" id="article-nav-older" class="article-nav-link-wrap">
@@ -462,11 +499,11 @@ MathJax.Hub.Queue(function() {
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color3">R包</a>
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color5">因果推断</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color5">因果推断</a>
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color3">R包</a>
               </li>
             
             <div class="clearfix"></div>
