@@ -5,14 +5,14 @@
   
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <link rel="dns-prefetch" href="http://yoursite.com/blog">
+  <link rel="dns-prefetch" href="http://yoursite.com">
   <title>写R包可能出现的问题 | Wendy的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="最近学习写R包，参考博客：如何快速写一个R包。根据该博客教程写R包非常简单，补充我遇到的两个小问题。">
 <meta name="keywords" content="R包">
 <meta property="og:type" content="article">
 <meta property="og:title" content="写R包可能出现的问题">
-<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;blog&#x2F;2019&#x2F;11&#x2F;12&#x2F;r%E5%8C%85%E9%97%AE%E9%A2%98&#x2F;index.html">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;12&#x2F;r%E5%8C%85%E9%97%AE%E9%A2%98&#x2F;index.html">
 <meta property="og:site_name" content="Wendy的博客">
 <meta property="og:description" content="最近学习写R包，参考博客：如何快速写一个R包。根据该博客教程写R包非常简单，补充我遇到的两个小问题。">
 <meta property="og:locale" content="zh-CN">
@@ -220,7 +220,7 @@
 				
 				<br>
 				<strong>本文链接：</strong>
-				http://yoursite.com/blog/2019/11/12/r%E5%8C%85%E9%97%AE%E9%A2%98/
+				http://yoursite.com/2019/11/12/r%E5%8C%85%E9%97%AE%E9%A2%98/
 				<br>
 				<strong>版权声明：</strong>
 				本作品采用
@@ -340,7 +340,7 @@
     <a class="close js-modal-close" href="javascript:;" target="_blank" rel="noopener"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACv0lEQVR42u3awU4jMRAE0Pz/T4PECQSTVLXtJELPJ0Rmg58P497qvt3i9fG1fv/8/Te/1/3nZ99/O7Hw8PDwRltPtphvK6e2e8ifx8PDwzvNSy6D9pWdvMqTQ0kuj8vf4+Hh4b2U15bU+XbbUhsPDw/vP/GScnklT8DDw8N7H94sik2OIL8A7hfxx7MWPDw8vJi30gB71c9P6u/h4eHhlW2n5IW7cqInwo4fu8XDw8M7wFtv889ChFnJ3v4tPDw8vHO8vBZNttgObLXXz6yRhoeHh7eX14495e2u/DJoPy2uEzw8PLytvPxFPGtEtQc3a7Zd7h8PDw/vGK+NFfYGu7tK7aV8Ag8PD2/0t9rRq5VRrWFGEpfXGybL8PDw8C6+Odlu0uZvg4kVQN6iw8PDwzvBa2OC9QAiaY+1sAfHjYeHh7eVt7cgzoPgtjjOxxHqCQg8PDy8ZV7yaRtStKX2jHQZRuDh4eEd4OVBal7atsNSbfcqGfDCw8PDO8HLC+I8nriNVn5MdYyLh4eHt5XXjje1kWteKOcZQnFV4OHh4R3jJS2ldjwriYnr+yooo/Hw8PCez0te33lDqw0OVqLhzTNleHh4ePH/1mfF8blyuY08fnyKh4eH90RevtHkJd5uNG+YPXgSDw8P7wAv/4pdBfFssCC/Ei6fxMPDw9vES17fecl7/9pot9heQlF/Dw8PD+8Yr23555HuSkBcg/Hw8PAO8Nq6uw0dVoZTZ8MED57Hw8PDW+Z9lCsvqWdbbw/0wXfi4eHhHeDla9d4VhtGzIr4GomHh4dX8trLYNa4yhtsbSxSj17h4eHhbeLlkUEyCpCXwjmvvbTw8PDw3oG3svVkKGEl7Lj8V3h4eHhvyctj2ZWwtT1WPDw8vNO89TBittrWWt14w8PDwzvAm21iPWhIwt/8mc1njIeHh/f3+gQasgMnM7kl9QAAAABJRU5ErkJggg==" alt="微信分享二维码">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACNklEQVR42u3aS27DMAxFUe9/0+60QG3lPtIpYOpqFAR2pNMBK36OA6/z1/r7PXn+7jPZ5bElQ4aM1zLO5SLHIr9P/hzrfe+ekSFDxj4Msv36mfWh179WC80yZMiQkW5MLo7pWzJkyJDRD7j8Ykd2lCFDhow1gySxtVJaWmj7ei4uQ4aMFzJqJbP/+fyV/oYMGTJexTjDlf4OD8c8yF7sIkOGjNEMHuDS1uazzQY0liFDhozRDNJ65I3JdHQjDccyZMjYjcGHvXi7kY981UL5xe4yZMgYzeiPc/FWQVpE48mzDBky9mGQ4JgG1s4lsjUCIkOGjKEMcvlL25A8ZPMGajFOy5Ah47WMWiEsHQLrj4V94MmQIWMDRqdYlobdp9Lgi8aADBkyhjI65fs0dNYS3bgMJ0OGjHGMNGXlqSY/Ig/6t9/IkCFjNKNW8AouamF5rlbOkyFDxmzGU2X9fhLbSZtlyJCxGwO9hstk/KC8nXDxlgwZMkYz+EWQJ6u1o5DyXJzEypAhYxAjfZkf/ancOr4gypAhYyijdhWrBdY0ZUVsGTJkbMCopaYkmJJDp6nvQaKyDBkyRjDOcBFq2gzgITiYaJMhQ8YgRjpsUSzQh9U+HsSLMyMyZMh4IYMEytpBazNoxTPIkCFjA0atkdkZ/Kr9BwhycRkyZGzM6BT6OaB4e5UhQ4YMcPlLR107AfpDC1OGDBnjGHzkK2V02gxBeixDhozRjH5BP21YpofmqbUMGTLGMX4Au3Z0cnu6VV0AAAAASUVORK5CYII=" alt="微信分享二维码">
     </div>
 </div>
 
