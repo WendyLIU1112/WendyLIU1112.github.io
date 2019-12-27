@@ -3,11 +3,11 @@
   <title>Wendy的博客</title>
   
   <subtitle>1585282623@qq.com</subtitle>
-  <link href="/atom.xml" rel="self"/>
+  <link href="/blog/atom.xml" rel="self"/>
   
-  <link href="http://yoursite.com/"/>
+  <link href="https://wendyliu1112.github.io/blog/"/>
   <updated>2019-12-27T01:13:46.993Z</updated>
-  <id>http://yoursite.com/</id>
+  <id>https://wendyliu1112.github.io/blog/</id>
   
   <author>
     <name>Liu Wenli</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>写R包可能出现的问题</title>
-    <link href="http://yoursite.com/2019/11/12/r%E5%8C%85%E9%97%AE%E9%A2%98/"/>
-    <id>http://yoursite.com/2019/11/12/r%E5%8C%85%E9%97%AE%E9%A2%98/</id>
+    <link href="https://wendyliu1112.github.io/blog/2019/11/12/r%E5%8C%85%E9%97%AE%E9%A2%98/"/>
+    <id>https://wendyliu1112.github.io/blog/2019/11/12/r%E5%8C%85%E9%97%AE%E9%A2%98/</id>
     <published>2019-11-12T08:02:05.868Z</published>
     <updated>2019-12-27T01:13:46.993Z</updated>
     
@@ -33,14 +33,14 @@
     
     
     
-      <category term="R包" scheme="http://yoursite.com/tags/R%E5%8C%85/"/>
+      <category term="R包" scheme="https://wendyliu1112.github.io/blog/tags/R%E5%8C%85/"/>
     
   </entry>
   
   <entry>
     <title>【文献综述】估计最优ITR的方法</title>
-    <link href="http://yoursite.com/2019/11/12/%E4%BC%B0%E8%AE%A1%E6%9C%80%E4%BC%98ITR/"/>
-    <id>http://yoursite.com/2019/11/12/%E4%BC%B0%E8%AE%A1%E6%9C%80%E4%BC%98ITR/</id>
+    <link href="https://wendyliu1112.github.io/blog/2019/11/12/%E4%BC%B0%E8%AE%A1%E6%9C%80%E4%BC%98ITR/"/>
+    <id>https://wendyliu1112.github.io/blog/2019/11/12/%E4%BC%B0%E8%AE%A1%E6%9C%80%E4%BC%98ITR/</id>
     <published>2019-11-12T08:02:05.868Z</published>
     <updated>2019-12-26T13:56:43.749Z</updated>
     
@@ -54,14 +54,14 @@
     
     
     
-      <category term="因果推断" scheme="http://yoursite.com/tags/%E5%9B%A0%E6%9E%9C%E6%8E%A8%E6%96%AD/"/>
+      <category term="因果推断" scheme="https://wendyliu1112.github.io/blog/tags/%E5%9B%A0%E6%9E%9C%E6%8E%A8%E6%96%AD/"/>
     
   </entry>
   
   <entry>
     <title>抽样</title>
-    <link href="http://yoursite.com/2019/11/12/%E6%8A%BD%E6%A0%B7/"/>
-    <id>http://yoursite.com/2019/11/12/%E6%8A%BD%E6%A0%B7/</id>
+    <link href="https://wendyliu1112.github.io/blog/2019/11/12/%E6%8A%BD%E6%A0%B7/"/>
+    <id>https://wendyliu1112.github.io/blog/2019/11/12/%E6%8A%BD%E6%A0%B7/</id>
     <published>2019-11-12T08:02:05.868Z</published>
     <updated>2019-11-13T14:07:27.150Z</updated>
     
