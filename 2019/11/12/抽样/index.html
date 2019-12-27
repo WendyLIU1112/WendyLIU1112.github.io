@@ -5,14 +5,14 @@
   
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <link rel="dns-prefetch" href="https://wendyliu1112.github.io/blog">
+  <link rel="dns-prefetch" href="https://wendyliu1112.github.io">
   <title>抽样 | Wendy的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="在当前精准医疗的要求下，针对每个病人的信息使用不同的治疗方案，找到最优的ITR（individiualized treatment rule）非常重要。主要思想是基于个体信息（临床协变量、基因等），最大化每个人的outcome（如事件时间、健康指标、疾病指标）。">
 <meta name="keywords" content="statistics">
 <meta property="og:type" content="article">
 <meta property="og:title" content="抽样">
-<meta property="og:url" content="https:&#x2F;&#x2F;wendyliu1112.github.io&#x2F;blog&#x2F;2019&#x2F;11&#x2F;12&#x2F;%E6%8A%BD%E6%A0%B7&#x2F;">
+<meta property="og:url" content="https:&#x2F;&#x2F;wendyliu1112.github.io&#x2F;2019&#x2F;11&#x2F;12&#x2F;%E6%8A%BD%E6%A0%B7&#x2F;">
 <meta property="og:site_name" content="Wendy的博客">
 <meta property="og:description" content="在当前精准医疗的要求下，针对每个病人的信息使用不同的治疗方案，找到最优的ITR（individiualized treatment rule）非常重要。主要思想是基于个体信息（临床协变量、基因等），最大化每个人的outcome（如事件时间、健康指标、疾病指标）。">
 <meta property="og:locale" content="zh-CN">
@@ -214,7 +214,7 @@
 				
 				<br>
 				<strong>本文链接：</strong>
-				https://wendyliu1112.github.io/blog/2019/11/12/%E6%8A%BD%E6%A0%B7/
+				https://wendyliu1112.github.io/2019/11/12/%E6%8A%BD%E6%A0%B7/
 				<br>
 				<strong>版权声明：</strong>
 				本作品采用
@@ -323,7 +323,7 @@
     <a class="close js-modal-close" href="javascript:;" target="_blank" rel="noopener"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACsElEQVR42u3aQW4CMQwFUO5/aSp1xSbwbccqld6sqgzM5KVSbBw/HvH1/L1OI+/vnkZex1+v0/NPT7hw4eHh4bWmfrpOL0g+mUw3YSdPOD4NDw8Pb433PhhU2ckuXQ0zyVvw8PDwvo2XTzoPG72UGg8PD+9/8TZKD9W34OHh4X0DL9+mqwl3kijPyxkXai14eHh4Ma96APYNfy+e7+Hh4eENTtXnh/rJxp0UbZuzxcPDw1vg5SnsvD2rlzrnMyn8YsDDw8O7yks29HmBYHKgVX4aHh4e3jKvtwXnLVmTFqu85QsPDw9vjzcpRuRFhN5i5eWJYzjBw8PDW+DlN6rs8ovzODZYSjw8PLxbvLwM0WsmSEYmTVofvouHh4e3wKumuZOCb6+ZYH4Ih4eHh3eXVw0A+cFV9e6k7HucDx4eHt4Cr9og1Tu4qpYSeo0FURkXDw8Pb8DLU958KtWRXrNC9AMADw8Pb5lXPc7Px/NCbR5Oort4eHh4C7y8aFtteNooNzQXHQ8PD+8qb3KUVQ0Dk8O2agDDw8PD2+PNp1797nwRk7CBh4eHt8fbgPVaDaqhInkCHh4e3h6vVwiYt1L1SsZ5+MHDw8Pb4+WTSLbmahE2aVOotnM9khiFh4eH1+LlBdyNY/5eYl0OTnh4eHhXeckXokrwOCT0FuVDaMHDw8Nb5lXboUZ9XnGrVjV9H/1P8PDw8NLctdBAkCfHk/Hmcdf7z+Ph4eFd4j2L16R80As81QT92DqAh4eHd4mXX/MWq3xaSXqNh4eH97e8JBhsbMq9Mkf5QA4PDw9vjdd7fa8se6vBKyp24OHh4f0pr1e8yLfyvHxcWHQ8PDy8L+PliXVeDp4syiilxsPDwyvyqsWISXiYtCnkT8DDw8Pb4zV/5Le2+15fWC8dx8PDw1vg/QCM3AMnyZ/8lAAAAABJRU5ErkJggg==" alt="微信分享二维码">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACK0lEQVR42u3aS27DMAxF0e5/0+40QGD5PtItIOpqVLiJreMCLD/6+cHr+lifVzqf/P7t93dfXjJkyNiWcS0XeQDZKL//+vrtTmTIkHEAg4TCNenuCnkF62ehFydDhgwZS0YQFnF4lSFDhowOg4TLTropQ4YMGZ0iNi1f1+A0BL9Wi8uQIWNDBt/E///8J/MNGTJkbMW4wtXZ1joR7CwZMmTMZvAAx1NGjuFUlGjKkCHjGEbarK819/vD0fh8mQwZMrZl1L6WhkWeIBbHqDJkyDiAwY921ZC1pwSjUxkyZIxmpGPCt45z1Q5hPARuGTJkDGXUxgA1Kj9MFiejMmTIGM3gJSh/WLpd/lKKh9JkyJAxiPHuWJGnm7WAe/t5GTJkjGYUm/Klw2HrT8aNNhkyZBzA6DT6SYnLw+XLmawMGTKOYXQSx7Q9x5G38w0ZMmSMY9RKR55K1gYP6bNkyJAxm0Ha+rVBZnqMgw9BH+4jQ4aMoQweKNOGWqetlqaYMmTIOIeRXueMTimLdihDhowDGJ3JJ9liPzY+3EeGDBkHMPjW06CZDgD4cAJV4TJkyNiccYWLp3Fp4UqSwoe/gwwZMoYy+OrMHPokXjDLkCFjKiMdBgRz0XDkye8Z//eQIUPGCAYfAPAikw8J0lJWhgwZMmopWlr6vjAMkCFDhox2TdxvvfFmnAwZMk5g8HDJD291iuF0ICpDhozZjLR05JsmpDQot4aaMmTI2I/xCzBaiYdYbTVIAAAAAElFTkSuQmCC" alt="微信分享二维码">
     </div>
 </div>
 
