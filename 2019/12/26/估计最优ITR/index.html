@@ -9,20 +9,17 @@
   <title>【文献综述】估计最优ITR的方法 | Wendy的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="由于许多疾病和不同患者对治疗的反应均不相同，因此有必要对患者进行个体化治疗（即精准医疗）。个性化治疗规则（individiualized treatment rule，ITR）是根据患者特征推荐治疗的决策规则。在当前精准医疗的要求下，针对每个病">
+<meta name="keywords" content="因果推断,精准医疗">
 <meta property="og:type" content="article">
 <meta property="og:title" content="【文献综述】估计最优ITR的方法">
-<meta property="og:url" content="https://wendyliu1112.github.io/2019/12/26/%E4%BC%B0%E8%AE%A1%E6%9C%80%E4%BC%98ITR/index.html">
+<meta property="og:url" content="https:&#x2F;&#x2F;wendyliu1112.github.io&#x2F;2019&#x2F;12&#x2F;26&#x2F;%E4%BC%B0%E8%AE%A1%E6%9C%80%E4%BC%98ITR&#x2F;index.html">
 <meta property="og:site_name" content="Wendy的博客">
 <meta property="og:description" content="由于许多疾病和不同患者对治疗的反应均不相同，因此有必要对患者进行个体化治疗（即精准医疗）。个性化治疗规则（individiualized treatment rule，ITR）是根据患者特征推荐治疗的决策规则。在当前精准医疗的要求下，针对每个病">
-<meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/20191120172028936.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MTEzNTc4Ng==,size_16,color_FFFFFF,t_70">
-<meta property="article:published_time" content="2019-12-26T08:18:15.000Z">
-<meta property="article:modified_time" content="2020-01-09T07:38:21.136Z">
-<meta property="article:author" content="Liu Wenli">
-<meta property="article:tag" content="因果推断">
-<meta property="article:tag" content="精准医疗">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https:&#x2F;&#x2F;img-blog.csdnimg.cn&#x2F;20191120172028936.png?x-oss-process=image&#x2F;watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MTEzNTc4Ng==,size_16,color_FFFFFF,t_70">
+<meta property="og:updated_time" content="2020-01-09T07:38:21.136Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://img-blog.csdnimg.cn/20191120172028936.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MTEzNTc4Ng==,size_16,color_FFFFFF,t_70">
+<meta name="twitter:image" content="https:&#x2F;&#x2F;img-blog.csdnimg.cn&#x2F;20191120172028936.png?x-oss-process=image&#x2F;watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MTEzNTc4Ng==,size_16,color_FFFFFF,t_70">
   
     <link rel="alternative" href="/atom.xml" title="Wendy的博客" type="application/atom+xml">
   
@@ -44,7 +41,7 @@
 
   
 
-<meta name="generator" content="Hexo 4.2.0"></head>
+</head>
 
 <body>
   <div id="container" q-class="show:isCtnShow">
@@ -77,15 +74,15 @@
 		<nav class="header-smart-menu">
     		
     			
-    			<a q-on="click: openSlider(e, 'innerArchive')" href="javascript:void(0)">所有文章</a>
+    			<a q-on="click: openSlider(e, 'innerArchive')" href="javascript:void(0)" target="_blank" rel="noopener">所有文章</a>
     			
             
     			
-    			<a q-on="click: openSlider(e, 'friends')" href="javascript:void(0)">友链</a>
+    			<a q-on="click: openSlider(e, 'friends')" href="javascript:void(0)" target="_blank" rel="noopener">友链</a>
     			
             
     			
-    			<a q-on="click: openSlider(e, 'aboutme')" href="javascript:void(0)">关于我</a>
+    			<a q-on="click: openSlider(e, 'aboutme')" href="javascript:void(0)" target="_blank" rel="noopener">关于我</a>
     			
             
 		</nav>
@@ -195,45 +192,45 @@
       
         <p>由于许多疾病和不同患者对治疗的反应均不相同，因此有必要对患者进行个体化治疗（即精准医疗）。<strong>个性化治疗规则</strong>（individiualized treatment rule，<strong>ITR</strong>）是根据患者特征推荐治疗的决策规则。在当前<strong>精准医疗</strong>的要求下，针对每个病<br><a id="more"></a><br>人的信息使用不同的治疗方案，推荐<strong>最优ITR</strong>非常重要。主要思想是基于个体信息（如临床协变量、基因等），最大化群体平均的outcome（如事件发生时间、健康指标、疾病指标等）。</p>
 <p>这里作为入门，介绍了当前估计optimal ITR的框架与几种主要方法。</p>
-<h1 id="框架"><a href="#框架" class="headerlink" title="框架"></a>框架</h1><h2 id="相关数据"><a href="#相关数据" class="headerlink" title="相关数据"></a>相关数据</h2><p>三元随机向量 $(\mathbf{x}, A, R)$<br>其中，协变量： $\mathbf{x}=\left(1, X<em>{1}, \cdots, X</em>{p}\right) \in \mathcal{X}$<br>&emsp;&emsp;&emsp;治疗方案(treatment)：$A \in{1,2, \cdots, K}$<br>&emsp;&emsp;&emsp;治疗效果(outcome)：$R$。    假设$R$有界，且$R$越大代表治疗效果越好。</p>
+<h1 id="框架"><a href="#框架" class="headerlink" title="框架"></a>框架</h1><h2 id="相关数据"><a href="#相关数据" class="headerlink" title="相关数据"></a>相关数据</h2><p>三元随机向量 $(\mathbf{x}, A, R)$<br>其中，协变量： $\mathbf{x}=\left(1, X_{1}, \cdots, X_{p}\right) \in \mathcal{X}$<br>&emsp;&emsp;&emsp;治疗方案(treatment)：$A \in\{1,2, \cdots, K\}$<br>&emsp;&emsp;&emsp;治疗效果(outcome)：$R$。    假设$R$有界，且$R$越大代表治疗效果越好。</p>
 <p>先验概率分布 $\pi(a, x)=P[A=a|\mathbf{x}=x]$ 已知（未知时可用多项logistic回归近似）。并假设对于所有$a\in\mathcal{A}$ ， $\pi(a,x)&gt;0$ a.s。</p>
-<p>样本 $\left{\left(\mathbf{x}<em>{i}, A</em>{i}, R_{i}\right), i=1, \cdots, n\right}$ i.i.d </p>
+<p>样本 $\left\{\left(\mathbf{x}_{i}, A_{i}, R_{i}\right), i=1, \cdots, n\right\}$ i.i.d </p>
 <h2 id="Target"><a href="#Target" class="headerlink" title="Target"></a>Target</h2><p> 决策函数 (ITR)： $d(\mathbf{x}): \mathcal{X} \rightarrow \mathcal{A}$</p>
 <p> $d$ 的值（Value）：$V(d) \triangleq E^{d}(R)=\int R d P^{d}=\int R \frac{d P^{d}}{d P} d P=E\left[\frac{1_{A=d(\mathbf{x})}}{\pi(A, \mathbf{x})} R\right]$<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;其中，$P$：$(\mathbf{x}, A, R)$的分布<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;$P^{d}$：$d$指定治疗方案下，$(\mathbf{x}, A, R)$的分布</p>
-<p><strong>最优 ITR</strong>：$d<em>{0} \in \arg \max </em>{d \in \mathcal{A}} V(d)$<br>即如果患者群体遵循该方案，则将产生平均情况下最有利的结果。</p>
+<p><strong>最优 ITR</strong>：$d_{0} \in \arg \max _{d \in \mathcal{A}} V(d)$<br>即如果患者群体遵循该方案，则将产生平均情况下最有利的结果。</p>
 <h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p>治疗主要分为单阶段治疗和动态治疗（dynamic treatment regime）。</p>
 <p>对于<strong>单阶段治疗</strong>，只需要一次治疗，所以只需在某个关键点制定治疗规则。<br>而<strong>动态治疗</strong>更为复杂且更有意义。在临床实践中，医生会根据患者的基线和<strong>不断发展</strong>的特点对患者的病程推荐一系列的治疗方案。所以，动态治疗机制是一列有序治疗规则，每个规则对应于疾病或紊乱过程中的关键决策点，并以患者在该点的信息作为输入，从可选项中输出他应接受的治疗。</p>
 <p>另外，通常有许多预处理变量（prescriptive variables/pretreatment variables）可能对构建最优 ITR 不起作用，且出于成本和可解释性的考虑，最优 ITR 仅应使用少数几个变量，所以需要变量选择，这里不做讨论。</p>
 <p>对于单阶段随机试验数据，一种方法是，在一类治疗规则下<strong>最大化平均响应的经验版本</strong>。但是，这种最大化在计算上是困难的（因为处理规则的平均响应是对加权示性函数的期望，示性函数对于参数不连续且不凹）。为了解决这一挑战，我们进行了替代。所以另一种方法（也是我们最常用的方法）是，使用<strong>两步过程</strong>，<strong>首先估计条件均值，然后最大化条件均值得出最优ITR的估计</strong>。这种方法依赖于outcome的条件均值的估计，强调了临床响应模型的预测准确性，而不是直接针对最优ITR的决策边界。</p>
 <h2 id="初步分析"><a href="#初步分析" class="headerlink" title="初步分析"></a>初步分析</h2><ol>
-<li>协变量低维且ITR类简单时<br>直接构造$E\left[\frac{1<em>{A=d(\mathbf{x})}}{\pi(A, \mathbf{x})} R\right]$的经验形式，对其最大化求 $d</em>{0}$（鉴于示性函数非凸非连续，不好做）</li>
+<li>协变量低维且ITR类简单时<br>直接构造$E\left[\frac{1_{A=d(\mathbf{x})}}{\pi(A, \mathbf{x})} R\right]$的经验形式，对其最大化求 $d_{0}$（鉴于示性函数非凸非连续，不好做）</li>
 </ol>
 <ol>
-<li>ITR类很大<br>使用两步过程（Two-step procedure）<br>（1）估计条件均值$Q<em>{0}$(或$T</em>{0}$)<br>（2）最大化前一步所得的估计量求 $d_{0}$</li>
+<li>ITR类很大<br>使用两步过程（Two-step procedure）<br>（1）估计条件均值$Q_{0}$(或$T_{0}$)<br>（2）最大化前一步所得的估计量求 $d_{0}$</li>
 </ol>
-<p>其中， quality:   $Q<em>{0}(\mathbf{x}, A) \triangleq E(R | \mathbf{x}, A)$<br>&emsp; &emsp;&emsp;prediction error of Q: $L(Q) \triangleq E[R-Q(X, A)]^{2}$<br>&emsp; &emsp;&emsp;treatment effect term: $T(X, A) \triangleq Q(X, A)-E[Q(X, A) | X]$<br>&emsp; &emsp;&emsp;true treatment effect term: $T</em>{0}(X, A) \triangleq Q<em>{0}(X, A)-E[Q</em>{0}(X, A) | X]$</p>
-<p>&emsp; $\because$  $V(d)=E\left[\frac{1<em>{A=d(\mathbf{x})}}{\pi(A, \mathbf{x})} Q</em>{0}(\mathbf{x}, A)\right]=E\left[\sum<em>{a \in \mathcal{A}} 1</em>{d(\mathbf{x})=a} Q<em>{0}(\mathbf{x}, a)\right]=E\left[Q</em>{0}(\mathbf{x}, d(\mathbf{x}))\right]$</p>
-<p>&emsp; &emsp; $V\left(d<em>{0}\right)=E\left[Q</em>{0}\left(\mathbf{x}, d<em>{0}(\mathbf{x})\right)\right] \leq E\left[\max </em>{a \in \mathcal{A}} Q<em>{0}(\mathbf{x}, a)\right]$<br>&emsp; &emsp; $V\left(d</em>{0}\right) \geq\left.V(d)\right|<em>{d(\mathbf{x}) \in \arg \max </em>{a \in \mathcal{A}} Q<em>{0}(X, a)}=E\left[\max </em>{a \in \mathcal{A}} Q_{0}(\mathbf{x}, a)\right]$</p>
-<p>&emsp; $\therefore$ $d<em>{0}(\mathbf{x}) \in \arg \max </em>{a \in \mathcal{A}} Q<em>{0}(\mathbf{x}, a)= \arg \max </em>{a} T_{0}(\mathbf{x}, a)$</p>
-<p>所以，为了解决$V(d)$的非凸和非连续性，大多数方法都是将最大化$V(d)$ 转化为最大化 $Q<em>{0}$ 和 $T</em>{0}$</p>
+<p>其中， quality:   $Q_{0}(\mathbf{x}, A) \triangleq E(R | \mathbf{x}, A)$<br>&emsp; &emsp;&emsp;prediction error of Q: $L(Q) \triangleq E[R-Q(X, A)]^{2}$<br>&emsp; &emsp;&emsp;treatment effect term: $T(X, A) \triangleq Q(X, A)-E[Q(X, A) | X]$<br>&emsp; &emsp;&emsp;true treatment effect term: $T_{0}(X, A) \triangleq Q_{0}(X, A)-E[Q_{0}(X, A) | X]$</p>
+<p>&emsp; $\because$  $V(d)=E\left[\frac{1_{A=d(\mathbf{x})}}{\pi(A, \mathbf{x})} Q_{0}(\mathbf{x}, A)\right]=E\left[\sum_{a \in \mathcal{A}} 1_{d(\mathbf{x})=a} Q_{0}(\mathbf{x}, a)\right]=E\left[Q_{0}(\mathbf{x}, d(\mathbf{x}))\right]$</p>
+<p>&emsp; &emsp; $V\left(d_{0}\right)=E\left[Q_{0}\left(\mathbf{x}, d_{0}(\mathbf{x})\right)\right] \leq E\left[\max _{a \in \mathcal{A}} Q_{0}(\mathbf{x}, a)\right]$<br>&emsp; &emsp; $V\left(d_{0}\right) \geq\left.V(d)\right|_{d(\mathbf{x}) \in \arg \max _{a \in \mathcal{A}} Q_{0}(X, a)}=E\left[\max _{a \in \mathcal{A}} Q_{0}(\mathbf{x}, a)\right]$</p>
+<p>&emsp; $\therefore$ $d_{0}(\mathbf{x}) \in \arg \max _{a \in \mathcal{A}} Q_{0}(\mathbf{x}, a)= \arg \max _{a} T_{0}(\mathbf{x}, a)$</p>
+<p>所以，为了解决$V(d)$的非凸和非连续性，大多数方法都是将最大化$V(d)$ 转化为最大化 $Q_{0}$ 和 $T_{0}$</p>
 <h1 id="分类"><a href="#分类" class="headerlink" title="分类"></a>分类</h1><h2 id="基于模型（model-based）"><a href="#基于模型（model-based）" class="headerlink" title="基于模型（model-based）"></a>基于模型（model-based）</h2><p>基于模型的方法主要有 $l_{1}-PLS$、<strong>Q learning</strong>和<strong>A learning</strong>，其中后两种方法都是CS中顺序决策的强化学习方法，应用到治疗过程实现动态治疗机制。</p>
-<p>经典做法是对$Q<em>{0}$(或$T</em>{0}$)指定假设模型，极小化$L(Q)$，做$Q<em>{0}$(或$T</em>{0}$)的估计，如  $l<em>{1}-PLS$ :<br>&emsp; &emsp;&emsp; &emsp; $\hat{\boldsymbol{\theta}}</em>{n}=\underset{\boldsymbol{\theta} \in \mathbb{R}^{J}}{\arg \min }\left{E<em>{n}[R-\Phi(\mathbf{x}, A) \boldsymbol{\theta}]^{2}+\lambda</em>{n} \sum<em>{j=1}^{J} \hat{\sigma}</em>{j}\left|\theta<em>{j}\right|\right}$<br>&emsp; &emsp;&emsp; &emsp; $\hat{d}</em>{n}(X) \in \underset{a \in \mathcal{A}}{\arg \max }  \Phi(X, a) \hat{\boldsymbol{\theta}}_{n}$</p>
+<p>经典做法是对$Q_{0}$(或$T_{0}$)指定假设模型，极小化$L(Q)$，做$Q_{0}$(或$T_{0}$)的估计，如  $l_{1}-PLS$ :<br>&emsp; &emsp;&emsp; &emsp; $\hat{\boldsymbol{\theta}}_{n}=\underset{\boldsymbol{\theta} \in \mathbb{R}^{J}}{\arg \min }\left\{E_{n}[R-\Phi(\mathbf{x}, A) \boldsymbol{\theta}]^{2}+\lambda_{n} \sum_{j=1}^{J} \hat{\sigma}_{j}\left|\theta_{j}\right|\right\}$<br>&emsp; &emsp;&emsp; &emsp; $\hat{d}_{n}(X) \in \underset{a \in \mathcal{A}}{\arg \max }  \Phi(X, a) \hat{\boldsymbol{\theta}}_{n}$</p>
 <h2 id="基于分类（classification-based）"><a href="#基于分类（classification-based）" class="headerlink" title="基于分类（classification-based）"></a>基于分类（classification-based）</h2><p>基于分类的方法是<strong>将最优 ITR 问题转化为加权分类问题</strong>，便于使用机器学习技术做估计。这里<strong>直接估计使临床反应最大化的决策规则</strong>，从而避免了条件均值建模和反演的需要。缺点是依赖于对所有对象使用正确的权重，这可能会导致模型错误指定。</p>
-<p>&emsp; &emsp;首先令$K=2$，即$A \in{-1,1}$</p>
-<p>&emsp; &emsp; $\because$   $d<em>{0} \in \arg \max </em>{d \in \mathcal{A}} V(d)$<br>&emsp; &emsp;&emsp; $\begin{aligned} V(d) = &amp;E\left[\frac{1<em>{A=d(\mathbf{x})}}{\pi(A, \mathbf{x})} R\right]= E\left[\frac{1</em>{A=d(\mathbf{x})}}{A \pi+(1-A) / 2} R\right]\=&amp;E[R | A=1]+E[R | A=-1]-E\left[\frac{I(A \neq \mathscr{d}(\mathbf{x}))}{A \pi+(1-A) / 2} R\right] \end{aligned}$<br>&emsp; &emsp; $\therefore$ $d<em>{0} \in \arg \min </em>{d \in \mathcal{A}} E\left[\frac{I(A \neq \mathscr{d}(\mathbf{x}))}{A \pi+(1-A) / 2} R\right]$</p>
+<p>&emsp; &emsp;首先令$K=2$，即$A \in\{-1,1\}$</p>
+<p>&emsp; &emsp; $\because$   $d_{0} \in \arg \max _{d \in \mathcal{A}} V(d)$<br>&emsp; &emsp;&emsp; $\begin{aligned} V(d) = &amp;E\left[\frac{1_{A=d(\mathbf{x})}}{\pi(A, \mathbf{x})} R\right]= E\left[\frac{1_{A=d(\mathbf{x})}}{A \pi+(1-A) / 2} R\right]\\=&amp;E[R | A=1]+E[R | A=-1]-E\left[\frac{I(A \neq \mathscr{d}(\mathbf{x}))}{A \pi+(1-A) / 2} R\right] \end{aligned}$<br>&emsp; &emsp; $\therefore$ $d_{0} \in \arg \min _{d \in \mathcal{A}} E\left[\frac{I(A \neq \mathscr{d}(\mathbf{x}))}{A \pi+(1-A) / 2} R\right]$</p>
 <p>$E\left[\frac{R}{A \pi+(1-A) / 2} I(A \neq \mathscr{d}(X))\right]$可看作加权分类误差，基于$X$将$A$分类，并对误判事件加权$R / (A \pi+(1-A) / 2)$。利用其经验形式，应用机器学习技术，即可直接算出最优ITR的估计。</p>
 <h2 id="直接搜索（Direct-search）"><a href="#直接搜索（Direct-search）" class="headerlink" title="直接搜索（Direct search）"></a>直接搜索（Direct search）</h2><p>直接搜索，顾名思义，直接对 $d_{0}$ 做估计。其中，直接学习（Direct learning）是一种简单而灵活的单步方法，直接估计最优 ITR。无需事先指定模型和权重，同时还有良好的几何解释。</p>
 <p>直接学习最开始考虑治疗方案为二分类的数据，即$K=2$。但推广到$K \geq 2$时，可能会导致次优（局部最优）的情况，所有有了<strong>基于角的直接学习</strong>(Angle Based D-learning)，</p>
 <ol>
-<li><p>$K=2$：<strong>一般直接学习</strong><br> 此时，$A \in{-1,1}$<br> 决策函数：$d<em>{0}(\mathbf{x})=\operatorname{sign}(\mathbf{E}[R | \mathbf{x}, A=1]-\mathbf{E}[R | \mathbf{x}, A=-1]):=\operatorname{sign}\left(f</em>{0}(\mathbf{x})\right)$<br>其中， $\begin{aligned} f<em>{0}(\mathbf{x}) &amp;=\mathbf{E}[R | \mathbf{x}, A=1]-\mathbf{E}[R | \mathbf{x}, A=-1] \ &amp;=\mathbf{E}\left[\frac{R A}{\pi(A, \mathbf{X})} | \mathbf{x}, A=1\right] \pi(1, \mathbf{x})+\mathbf{E}\left[\frac{R A}{\pi(A, \mathbf{x})} | \mathbf{x}, A=-1\right] \pi(-1, \mathbf{x}) \ &amp;=\mathbf{E}\left[\frac{R A}{\pi(A, \mathbf{x})} | \mathbf{x}\right] \end{aligned}$<br>接下来估计$f</em>{0}(\mathbf{x})$即可。</p>
+<li><p>$K=2$：<strong>一般直接学习</strong><br> 此时，$A \in\{-1,1\}$<br> 决策函数：$d_{0}(\mathbf{x})=\operatorname{sign}(\mathbf{E}[R | \mathbf{x}, A=1]-\mathbf{E}[R | \mathbf{x}, A=-1]):=\operatorname{sign}\left(f_{0}(\mathbf{x})\right)$<br>其中， $\begin{aligned} f_{0}(\mathbf{x}) &amp;=\mathbf{E}[R | \mathbf{x}, A=1]-\mathbf{E}[R | \mathbf{x}, A=-1] \\ &amp;=\mathbf{E}\left[\frac{R A}{\pi(A, \mathbf{X})} | \mathbf{x}, A=1\right] \pi(1, \mathbf{x})+\mathbf{E}\left[\frac{R A}{\pi(A, \mathbf{x})} | \mathbf{x}, A=-1\right] \pi(-1, \mathbf{x}) \\ &amp;=\mathbf{E}\left[\frac{R A}{\pi(A, \mathbf{x})} | \mathbf{x}\right] \end{aligned}$<br>接下来估计$f_{0}(\mathbf{x})$即可。</p>
 </li>
 <li><p>$K \geq 2$ ：<strong>基于角的直接学习（AD learning）</strong></p>
-<p>$\mathbf{w}<em>{A}=\left{\begin{array}{ll}<br> {(K-1)^{-1 / 2} \mathbf{1}</em>{K-1}} &amp; {\text{if}  \quad A=1} \<br>  {-(1+\sqrt{K}) /(K-1)^{3 / 2}}  {\mathbf{1}<em>{K-1}+\left(\frac{K}{K-1}\right)^{1 / 2} e</em>{A-1}} &amp; {\text {if } \quad2 \leq A \leq K}<br>  \end{array}\right.$</p>
+<p>$\mathbf{w}_{A}=\left\{\begin{array}{ll}<br> {(K-1)^{-1 / 2} \mathbf{1}_{K-1}} &amp; {\text{if}  \quad A=1} \\<br>  {-(1+\sqrt{K}) /(K-1)^{3 / 2}}  {\mathbf{1}_{K-1}+\left(\frac{K}{K-1}\right)^{1 / 2} e_{A-1}} &amp; {\text {if } \quad2 \leq A \leq K}<br>  \end{array}\right.$</p>
 </li>
 </ol>
-<p>&emsp;&emsp;&emsp;(1) $\mathbf{P}\left[\mathbf{w}=\mathbf{w}<em>{j} | \mathbf{x}\right]=\mathbf{P}[A=j | \mathbf{x}]$<br>&emsp;&emsp;&emsp;(2) $\sum</em>{j=1}^{K} \mathbf{w}<em>{j}=0$且 $\mathbf{w}</em>{i}^{T} \mathbf{w}_{j}=\left{\begin{array}{ll}<br>    1 &amp; {\text{if}  \quad i = j} \<br>     C(K)&lt; 1 &amp; {\text {if} \quad i \neq j}<br>     \end{array}\right.$</p>
-<p>&emsp;&emsp;&emsp;决策函数：<br>&emsp;&emsp;&emsp;$\begin{aligned} d<em>{0}(\mathbf{x}) = &amp; \underset{k \in{1, \ldots, K}}{\operatorname{argmax}} \mathbf{E}[R | \mathbf{x}, A=k] \<br>=&amp;\underset{k \in{1, \ldots, K}}{\operatorname{argmax}}(1-c(K)) \mathbf{E}[R | \mathbf{x}, A=k] \<br>=&amp;\underset{k \in{1, \ldots, K}}{\operatorname{argmax}}{(1-c(K)) \mathbf{E}[R | \mathbf{x}, A=k]+c(K) \sum</em>{j = 1}^{K} \mathbf{E}[R | \mathbf{x}, A=j] }\<br>=&amp;\underset{k \in{1, \ldots, K}}{\operatorname{argmax}}{\mathbf{E}[R | \mathbf{x}, A=k]+c(K) \sum<em>{j \neq k}^{K} \mathbf{E}[R | \mathbf{x}, A=j]}\<br>=&amp;\underset{k \in{1, \ldots, K}}{\operatorname{argmax}}{\mathbf{w}</em>{k}^{\mathrm{T}}\mathbf{E}[R\mathbf{w} | \mathbf{x}, A=k]+\mathbf{w}<em>{k}^{\mathrm{T}} \sum</em>{j \neq k}^{K} \mathbf{E}[R\mathbf{w} | \mathbf{x}, A=j]}\<br>=&amp;\underset{k \in{1, \ldots, K}}{\operatorname{argmax}} \mathbf{w}<em>{k}^{\mathrm{T}} \mathbf{E}\left[\frac{R \mathbf{w}}{\pi(A, \mathbf{x})} | \mathbf{x}\right]:=\underset{k \in{1, \ldots, K}}{\operatorname{argmax}} \mathbf{w}</em>{k}^{\mathrm{T}} \mathbf{f}<em>{0}(\mathbf{x})<br>\end{aligned}$<br>&emsp;&emsp;&emsp;其中，$\mathbf{f}</em>{0}(\mathbf{x}) = \mathbf{E}\left[\frac{R \mathbf{w}}{\pi(A, \mathbf{x})} | \mathbf{x}\right]$，同上作出$f_{0}(\mathbf{x})$的估计。</p>
-<p> &emsp;&emsp;&emsp;基于角的直接学习有很好的几何解释。单位向量 $\mathbf{w}<em>{A}$ 代表对应治疗方案$A$，对于估计出的$\hat{f</em>{0}}(\mathbf{x})$，计算其与各个 $\mathbf{w}<em>{A}$ 的内积，选出内积最大的 $\mathbf{w}</em>{A}$ 。在几何中，即<strong>选出与向量$\hat{f<em>{0}}(\mathbf{x})$夹角最小的 $\mathbf{w}</em>{A}$</strong> 。<br><img src="https://img-blog.csdnimg.cn/20191120172028936.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MTEzNTc4Ng==,size_16,color_FFFFFF,t_70" alt="K不同取值，直接学习的几何解释"></p>
+<p>&emsp;&emsp;&emsp;(1) $\mathbf{P}\left[\mathbf{w}=\mathbf{w}_{j} | \mathbf{x}\right]=\mathbf{P}[A=j | \mathbf{x}]$<br>&emsp;&emsp;&emsp;(2) $\sum_{j=1}^{K} \mathbf{w}_{j}=0$且 $\mathbf{w}_{i}^{T} \mathbf{w}_{j}=\left\{\begin{array}{ll}<br>    1 &amp; {\text{if}  \quad i = j} \\<br>     C(K)&lt; 1 &amp; {\text {if} \quad i \neq j}<br>     \end{array}\right.$</p>
+<p>&emsp;&emsp;&emsp;决策函数：<br>&emsp;&emsp;&emsp;$\begin{aligned} d_{0}(\mathbf{x}) = &amp; \underset{k \in\{1, \ldots, K\}}{\operatorname{argmax}} \mathbf{E}[R | \mathbf{x}, A=k] \\<br>=&amp;\underset{k \in\{1, \ldots, K\}}{\operatorname{argmax}}(1-c(K)) \mathbf{E}[R | \mathbf{x}, A=k] \\<br>=&amp;\underset{k \in\{1, \ldots, K\}}{\operatorname{argmax}}\{(1-c(K)) \mathbf{E}[R | \mathbf{x}, A=k]+c(K) \sum_{j = 1}^{K} \mathbf{E}[R | \mathbf{x}, A=j] \}\\<br>=&amp;\underset{k \in\{1, \ldots, K\}}{\operatorname{argmax}}\{\mathbf{E}[R | \mathbf{x}, A=k]+c(K) \sum_{j \neq k}^{K} \mathbf{E}[R | \mathbf{x}, A=j]\}\\<br>=&amp;\underset{k \in\{1, \ldots, K\}}{\operatorname{argmax}}\{\mathbf{w}_{k}^{\mathrm{T}}\mathbf{E}[R\mathbf{w} | \mathbf{x}, A=k]+\mathbf{w}_{k}^{\mathrm{T}} \sum_{j \neq k}^{K} \mathbf{E}[R\mathbf{w} | \mathbf{x}, A=j]\}\\<br>=&amp;\underset{k \in\{1, \ldots, K\}}{\operatorname{argmax}} \mathbf{w}_{k}^{\mathrm{T}} \mathbf{E}\left[\frac{R \mathbf{w}}{\pi(A, \mathbf{x})} | \mathbf{x}\right]:=\underset{k \in\{1, \ldots, K\}}{\operatorname{argmax}} \mathbf{w}_{k}^{\mathrm{T}} \mathbf{f}_{0}(\mathbf{x})<br>\end{aligned}$<br>&emsp;&emsp;&emsp;其中，$\mathbf{f}_{0}(\mathbf{x}) = \mathbf{E}\left[\frac{R \mathbf{w}}{\pi(A, \mathbf{x})} | \mathbf{x}\right]$，同上作出$f_{0}(\mathbf{x})$的估计。</p>
+<p> &emsp;&emsp;&emsp;基于角的直接学习有很好的几何解释。单位向量 $\mathbf{w}_{A}$ 代表对应治疗方案$A$，对于估计出的$\hat{f_{0}}(\mathbf{x})$，计算其与各个 $\mathbf{w}_{A}$ 的内积，选出内积最大的 $\mathbf{w}_{A}$ 。在几何中，即<strong>选出与向量$\hat{f_{0}}(\mathbf{x})$夹角最小的 $\mathbf{w}_{A}$</strong> 。<br><img src="https://img-blog.csdnimg.cn/20191120172028936.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MTEzNTc4Ng==,size_16,color_FFFFFF,t_70" alt="K不同取值，直接学习的几何解释"></p>
 <h1 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><ol>
 <li><a href="https://arxiv.org/pdf/1105.3369.pdf" target="_blank" rel="noopener">Qian, Min, and Susan A. Murphy. “PERFORMANCE GUARANTEES FOR INDIVIDUALIZED TREATMENT RULES.” Annals of Statistics 39.2 (2011): 1180-1210.</a></li>
 <li><a href="https://deepblue.lib.umich.edu/bitstream/handle/2027.42/74095/1467-9868.00389.pdf;sequence=1" target="_blank" rel="noopener">Murphy, Susan A.. “Optimal dynamic treatment regimes.” Journal of The Royal Statistical Society Series B-statistical Methodology 65.2 (2003): 331-355.</a></li>
@@ -281,7 +278,7 @@
 
       
         <div class="page-reward">
-          <a href="javascript:;" class="page-reward-btn tooltip-top">
+          <a href="javascript:;" target="_blank" rel="noopener" class="page-reward-btn tooltip-top">
             <div class="tooltip tooltip-east">
             <span class="tooltip-item">
               赏
@@ -320,11 +317,11 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">因果推断</a>
+        			<a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag article-tag-list-link color5">因果推断</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">精准医疗</a>
+        			<a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag article-tag-list-link color5">精准医疗</a>
         		</li>
       		
 		</ul>
@@ -350,35 +347,35 @@
 <div class="share-btn share-icons tooltip-left">
   <div class="tooltip tooltip-east">
     <span class="tooltip-item">
-      <a href="javascript:;" class="share-sns share-outer">
+      <a href="javascript:;" target="_blank" rel="noopener" class="share-sns share-outer">
         <i class="icon icon-share"></i>
       </a>
     </span>
     <span class="tooltip-content">
       <div class="share-wrap">
         <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+          <a class="weibo share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="weibo">
             <i class="icon icon-weibo"></i>
           </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+          <a class="weixin share-sns wxFab" href="javascript:;" target="_blank" rel="noopener" data-type="weixin">
             <i class="icon icon-weixin"></i>
           </a>
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
+          <a class="qq share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="qq">
             <i class="icon icon-qq"></i>
           </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
+          <a class="douban share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="douban">
             <i class="icon icon-douban"></i>
           </a>
-          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+          <a class="qzone share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="qzone">
             <i class="icon icon-qzone"></i>
           </a>
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+          <a class="facebook share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="facebook">
             <i class="icon icon-facebook"></i>
           </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+          <a class="twitter share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="twitter">
             <i class="icon icon-twitter"></i>
           </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
+          <a class="google share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="google">
             <i class="icon icon-google"></i>
           </a>
         </div>
@@ -388,7 +385,7 @@
 </div>
 
 <div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <a class="close js-modal-close" href="javascript:;" target="_blank" rel="noopener"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
       <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACvUlEQVR42u3aQW7jQAwEwPz/015gT3uIrG5y5E2A0skwJGtqDkOa5NdXfL3+Xlef//3m/VNX31z9QvKWAxceHh7eaOlX14x3dX/7xuS9N9uEh4eH9xgvDwYtcn/0v6feWPDw8PD+K684joOQ0MLw8PDwfiMvxyeBoU2R8fDw8H4ab1YamL2+DQbJxh2oteDh4eF12e+qAfb5zx/t7+Hh4eHFR3By7Lb35M++1hceHh7eE7zZSFNbhG0bWu1m3awcDw8P7yjvfWn1idZXGzA2gwh4eHh4T/PysuysgDsbrmobct8k03h4eHhHeW0CnSe1s0GB2bDXqnqNh4eHN+LV1YvyOM6T4zYwRM/i4eHhHeVt2k5tqr1PzZPy7jfFCDw8PLyjvH1Da59ez4JT0XLDw8PDe4CXJ6/5gNSmLLtps9X1FTw8PLw1Lwe0r883pU2jh/NleHh4eAvepmH/fin7csNmMAsPDw/vaV7b6NqEhLxI0WJuai14eHh4h3izlHd2WLe/n0+N3dyJh4eHd5TXNuNf5TVrYs0q0MU/Bjw8PLwRb3Yot4zZAEHeErsZt8LDw8N7gHe2WTVLuzdJfFTAxcPDwzvEyx/LixdtYNg0zKI0HQ8PD+8BXntk7w/9tuSRFyDw8PDwPs/LhwDa5Hh23OfjAjerwsPDw3uAt0mgZ4f7bAuS++uMGw8PD6/kJQXcWZDIBwvOjiPc1Krx8PDwDvFa5GZTikhVjlt95TENDw8Pb8TbHMezMu5+NCEvKOPh4eE9wZsdu7MtaMPDLLk/EFXw8PDwAt5m+KkdhJptRxIYLp/Fw8PDe4yXLGs2LNUWZNs4hoeHh/d7ebPl5gGgvQcPDw/vJ/DypDY6soOkfNNsw8PDw3ua1w5F5SFkVg4elh42ZVw8PDy8o9NNs8JE2+Jql3usy4eHh4eX8v4AgbMDJ0uTEW4AAAAASUVORK5CYII=" alt="微信分享二维码">
@@ -418,7 +415,7 @@
     <div class="mod-side-operation">
         
         <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+            <a href="javascript:void(0)" target="_blank" rel="noopener" class="mod-side-operation__jump-to-top">
                 <i class="icon-font icon-back"></i>
             </a>
             <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
@@ -551,15 +548,15 @@ MathJax.Hub.Queue(function() {
     
     
       
-      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'innerArchive')"><a href="javascript:void(0)" q-class="active:innerArchive">所有文章</a></li>
+      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'innerArchive')"><a href="javascript:void(0)" target="_blank" rel="noopener" q-class="active:innerArchive">所有文章</a></li>
       
         
       
-      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'friends')"><a href="javascript:void(0)" q-class="active:friends">友链</a></li>
+      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'friends')"><a href="javascript:void(0)" target="_blank" rel="noopener" q-class="active:friends">友链</a></li>
       
         
       
-      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'aboutme')"><a href="javascript:void(0)" q-class="active:aboutme">关于我</a></li>
+      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'aboutme')"><a href="javascript:void(0)" target="_blank" rel="noopener" q-class="active:aboutme">关于我</a></li>
       
         
     </ul>
@@ -580,15 +577,15 @@ MathJax.Hub.Queue(function() {
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">R包</a>
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color3">R包</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">因果推断</a>
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color5">因果推断</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">精准医疗</a>
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color5">精准医疗</a>
               </li>
             
             <div class="clearfix"></div>
