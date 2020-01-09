@@ -9,17 +9,19 @@
   <title>写R包可能出现的问题 | Wendy的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="最近学习写R包，参考博客：如何快速写一个R包。根据该博客教程写R包非常简单，补充我遇到的两个小问题。">
-<meta name="keywords" content="R包">
 <meta property="og:type" content="article">
 <meta property="og:title" content="写R包可能出现的问题">
-<meta property="og:url" content="https:&#x2F;&#x2F;wendyliu1112.github.io&#x2F;2019&#x2F;11&#x2F;12&#x2F;r%E5%8C%85%E9%97%AE%E9%A2%98&#x2F;index.html">
+<meta property="og:url" content="https://wendyliu1112.github.io/2019/11/12/r%E5%8C%85%E9%97%AE%E9%A2%98/index.html">
 <meta property="og:site_name" content="Wendy的博客">
 <meta property="og:description" content="最近学习写R包，参考博客：如何快速写一个R包。根据该博客教程写R包非常简单，补充我遇到的两个小问题。">
-<meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https:&#x2F;&#x2F;img-blog.csdnimg.cn&#x2F;20191226154920824.png">
-<meta property="og:updated_time" content="2020-01-09T07:38:44.720Z">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20191226154920824.png">
+<meta property="article:published_time" content="2019-11-12T08:02:05.868Z">
+<meta property="article:modified_time" content="2020-01-09T07:38:44.720Z">
+<meta property="article:author" content="Liu Wenli">
+<meta property="article:tag" content="R包">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https:&#x2F;&#x2F;img-blog.csdnimg.cn&#x2F;20191226154920824.png">
+<meta name="twitter:image" content="https://img-blog.csdnimg.cn/20191226154920824.png">
   
     <link rel="alternative" href="/atom.xml" title="Wendy的博客" type="application/atom+xml">
   
@@ -41,7 +43,7 @@
 
   
 
-</head>
+<meta name="generator" content="Hexo 4.2.0"></head>
 
 <body>
   <div id="container" q-class="show:isCtnShow">
@@ -74,15 +76,15 @@
 		<nav class="header-smart-menu">
     		
     			
-    			<a q-on="click: openSlider(e, 'innerArchive')" href="javascript:void(0)" target="_blank" rel="noopener">所有文章</a>
+    			<a q-on="click: openSlider(e, 'innerArchive')" href="javascript:void(0)">所有文章</a>
     			
             
     			
-    			<a q-on="click: openSlider(e, 'friends')" href="javascript:void(0)" target="_blank" rel="noopener">友链</a>
+    			<a q-on="click: openSlider(e, 'friends')" href="javascript:void(0)">友链</a>
     			
             
     			
-    			<a q-on="click: openSlider(e, 'aboutme')" href="javascript:void(0)" target="_blank" rel="noopener">关于我</a>
+    			<a q-on="click: openSlider(e, 'aboutme')" href="javascript:void(0)">关于我</a>
     			
             
 		</nav>
@@ -235,7 +237,7 @@
 
       
         <div class="page-reward">
-          <a href="javascript:;" target="_blank" rel="noopener" class="page-reward-btn tooltip-top">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
             <div class="tooltip tooltip-east">
             <span class="tooltip-item">
               赏
@@ -274,7 +276,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag article-tag-list-link color3">R包</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">R包</a>
         		</li>
       		
 		</ul>
@@ -300,35 +302,35 @@
 <div class="share-btn share-icons tooltip-left">
   <div class="tooltip tooltip-east">
     <span class="tooltip-item">
-      <a href="javascript:;" target="_blank" rel="noopener" class="share-sns share-outer">
+      <a href="javascript:;" class="share-sns share-outer">
         <i class="icon icon-share"></i>
       </a>
     </span>
     <span class="tooltip-content">
       <div class="share-wrap">
         <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="weibo">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
             <i class="icon icon-weibo"></i>
           </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" target="_blank" rel="noopener" data-type="weixin">
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
             <i class="icon icon-weixin"></i>
           </a>
-          <a class="qq share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="qq">
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
             <i class="icon icon-qq"></i>
           </a>
-          <a class="douban share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="douban">
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
             <i class="icon icon-douban"></i>
           </a>
-          <a class="qzone share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="qzone">
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
             <i class="icon icon-qzone"></i>
           </a>
-          <a class="facebook share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="facebook">
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
             <i class="icon icon-facebook"></i>
           </a>
-          <a class="twitter share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="twitter">
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
             <i class="icon icon-twitter"></i>
           </a>
-          <a class="google share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="google">
+          <a class="google share-sns" href="javascript:;" data-type="google">
             <i class="icon icon-google"></i>
           </a>
         </div>
@@ -338,7 +340,7 @@
 </div>
 
 <div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;" target="_blank" rel="noopener"><i class="icon icon-close"></i></a>
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
       <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACsklEQVR42u3aQXLbMBAEQP3/0/Ylh7gcijMLIOKheXLJFMGGq4D1LF6v+Pr66/r9eXLn+3uu7k/u2XDh4eHhLbz67+tqmOQV309KPlbyDpfTioeHh3eMly/K+WJ9M/DbSZmNi4eHh/dkXrIo509+f+esBMfDw8N7Aq8dbBY9fGxjwMPDwyt5CWAlbsgX+o9lLXh4eHgxL+8iPefnI/09PDw8vOWuehvC5ptBu2HMLjw8PLwTvPWjA+0BrBk7PwT2j2/h4eHhbeUloUOyfLcxRDtNOQwPDw/vNC9vUOWbxPpCnwOi+/Hw8PC28mYLd74ZrJTs+VvdxBB4eHh4W3ntMakcn2wzs4J+w9EBPDw8vAVeu6DPYtz2IEIe3d58Fw8PD+8wb/0sU7uUr7fBbqYSDw8P7xgvL6Znjfw2wsj/D7gZEQ8PD+8Ab0NjfjnGbZttS0g8PDy8ZV47wKxQbmOI9bL7z894eHh4h3n5ZrDraFQb++aRx2v2onh4eHhdXfpqH9qS1g9jtdOHh4eHd4I3i2XzY1KzGLct6y/fHA8PD++/8/JH58v3iZbY5XTj4eHhfYi3F58X1q/yqktqPDw8vAXerCnVvm57wGvDpoKHh4d3jJcHEPkSPwsg2ubWzdPw8PDwDvDqInXU7podIGg3jJqKh4eHt8BL2lez9n97WKrdNqI/Ax4eHt5hXjtwu1jPqMnnlyI8PDy8w7z81dvQtq3r2wA3+jUeHh7eMu+rvGYxxPok5hvGj2fi4eHhHeDNukVt9DBLlNdLcDw8PLxzvJUm1sqi3Aayw40BDw8P7xgvCSlODJ+X1O004eHh4T2Ht6v8bWPlYXyMh4eH9wDerBRunzwLPor+GB4eHt4yLw8jdi3ZCWZDkIGHh4d3gNf+w99Gt215PdtghocG8PDw8DreN0P8PBiVv4l0AAAAAElFTkSuQmCC" alt="微信分享二维码">
@@ -377,7 +379,7 @@
     <div class="mod-side-operation">
         
         <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" target="_blank" rel="noopener" class="mod-side-operation__jump-to-top">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
                 <i class="icon-font icon-back"></i>
             </a>
             <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
@@ -497,15 +499,15 @@ MathJax.Hub.Queue(function() {
     
     
       
-      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'innerArchive')"><a href="javascript:void(0)" target="_blank" rel="noopener" q-class="active:innerArchive">所有文章</a></li>
+      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'innerArchive')"><a href="javascript:void(0)" q-class="active:innerArchive">所有文章</a></li>
       
         
       
-      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'friends')"><a href="javascript:void(0)" target="_blank" rel="noopener" q-class="active:friends">友链</a></li>
+      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'friends')"><a href="javascript:void(0)" q-class="active:friends">友链</a></li>
       
         
       
-      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'aboutme')"><a href="javascript:void(0)" target="_blank" rel="noopener" q-class="active:aboutme">关于我</a></li>
+      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'aboutme')"><a href="javascript:void(0)" q-class="active:aboutme">关于我</a></li>
       
         
     </ul>
@@ -526,15 +528,15 @@ MathJax.Hub.Queue(function() {
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color3">R包</a>
+                <a href="javascript:void(0)" class="js-tag color5">因果推断</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color5">因果推断</a>
+                <a href="javascript:void(0)" class="js-tag color5">精准医疗</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color5">精准医疗</a>
+                <a href="javascript:void(0)" class="js-tag color3">R包</a>
               </li>
             
             <div class="clearfix"></div>
