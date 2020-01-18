@@ -29,7 +29,32 @@
     
     
     <entry>
-      <title>【文献综述】估计最优ITR的方法</title>
+      <title>抽样</title>
+      <link href="/2019/12/26/%E6%8A%BD%E6%A0%B7/"/>
+      <url>/2019/12/26/%E6%8A%BD%E6%A0%B7/</url>
+      
+        <content type="html"><![CDATA[<p>先占个位<br><a id="more"></a></p><h1 id="框架"><a href="#框架" class="headerlink" title="框架"></a>框架</h1><h2 id="基于模型"><a href="#基于模型" class="headerlink" title="基于模型"></a>基于模型</h2><h2 id="基于分类"><a href="#基于分类" class="headerlink" title="基于分类"></a>基于分类</h2>]]></content>
+      
+      
+      <categories>
+          
+          <category> 文献综述 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 抽样 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>估计最优ITR的方法</title>
       <link href="/2019/12/26/%E4%BC%B0%E8%AE%A1%E6%9C%80%E4%BC%98ITR/"/>
       <url>/2019/12/26/%E4%BC%B0%E8%AE%A1%E6%9C%80%E4%BC%98ITR/</url>
       
@@ -48,31 +73,6 @@
             <tag> 因果推断 </tag>
             
             <tag> 精准医疗 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>抽样</title>
-      <link href="/2019/12/26/%E6%8A%BD%E6%A0%B7/"/>
-      <url>/2019/12/26/%E6%8A%BD%E6%A0%B7/</url>
-      
-        <content type="html"><![CDATA[<p>先占个位<br><a id="more"></a></p><h1 id="框架"><a href="#框架" class="headerlink" title="框架"></a>框架</h1><h2 id="基于模型"><a href="#基于模型" class="headerlink" title="基于模型"></a>基于模型</h2><h2 id="基于分类"><a href="#基于分类" class="headerlink" title="基于分类"></a>基于分类</h2>]]></content>
-      
-      
-      <categories>
-          
-          <category> 文献综述 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 抽样 </tag>
             
         </tags>
       
