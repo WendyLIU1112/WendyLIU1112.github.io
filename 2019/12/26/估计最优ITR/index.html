@@ -17,7 +17,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://img-blog.csdnimg.cn/20191120172028936.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MTEzNTc4Ng==,size_16,color_FFFFFF,t_70">
 <meta property="article:published_time" content="2019-12-26T08:18:15.000Z">
-<meta property="article:modified_time" content="2020-01-18T19:37:41.140Z">
+<meta property="article:modified_time" content="2020-01-18T19:39:22.994Z">
 <meta property="article:author" content="Liu Wenli">
 <meta property="article:tag" content="因果推断">
 <meta property="article:tag" content="精准医疗">
@@ -211,12 +211,8 @@
 <p>对于<strong>单阶段治疗</strong>，只需要一次治疗，所以只需在某个关键点制定治疗规则。<br>而<strong>动态治疗</strong>更为复杂且更有意义。在临床实践中，医生会根据患者的基线和<strong>不断发展</strong>的特点对患者的病程推荐一系列的治疗方案。所以，动态治疗机制是一列有序治疗规则，每个规则对应于疾病或紊乱过程中的关键决策点，并以患者在该点的信息作为输入，从可选项中输出他应接受的治疗。</p>
 <p>另外，通常有许多预处理变量（prescriptive variables/pretreatment variables）可能对构建最优 ITR 不起作用，且出于成本和可解释性的考虑，最优 ITR 仅应使用少数几个变量，所以需要变量选择，这里不做讨论。</p>
 <p>对于单阶段随机试验数据，一种方法是，在一类治疗规则下<strong>最大化平均响应的经验版本</strong>。但是，这种最大化在计算上是困难的（因为处理规则的平均响应是对加权示性函数的期望，示性函数对于参数不连续且不凹）。为了解决这一挑战，我们进行了替代。所以另一种方法（也是我们最常用的方法）是，使用<strong>两步过程</strong>，<strong>首先估计条件均值，然后最大化条件均值得出最优ITR的估计</strong>。这种方法依赖于outcome的条件均值的估计，强调了临床响应模型的预测准确性，而不是直接针对最优ITR的决策边界。</p>
-<h2 id="初步分析"><a href="#初步分析" class="headerlink" title="初步分析"></a>初步分析</h2><ol>
-<li><p>协变量低维且ITR类简单时<br>直接构造$E\left[\frac{1_{A=d(\mathbf{x})}}{\pi(A, \mathbf{x})} R\right]$的经验形式，对其最大化求 $d_{0}$（鉴于示性函数非凸非连续，不好做）</p>
-</li>
-<li><p>ITR类很大<br>使用两步过程（Two-step procedure）<br>（1）估计条件均值$Q_{0}$(或$T_{0}$)<br>（2）最大化前一步所得的估计量求 $d_{0}$</p>
-</li>
-</ol>
+<h2 id="初步分析"><a href="#初步分析" class="headerlink" title="初步分析"></a>初步分析</h2><p> 1.协变量低维且ITR类简单时<br> 直接构造$E\left[\frac{1_{A=d(\mathbf{x})}}{\pi(A, \mathbf{x})} R\right]$的经验形式，对其最大化求 $d_{0}$（鉴于示性函数非凸非连续，不好做）</p>
+<p> 2.ITR类很大<br>使用两步过程（Two-step procedure）<br>（1）估计条件均值$Q_{0}$(或$T_{0}$)<br>（2）最大化前一步所得的估计量求 $d_{0}$</p>
 <p>其中， quality:   $Q_{0}(\mathbf{x}, A) \triangleq E(R | \mathbf{x}, A)$<br>&emsp; &emsp;&emsp;prediction error of Q: $L(Q) \triangleq E[R-Q(X, A)]^{2}$<br>&emsp; &emsp;&emsp;treatment effect term: $T(X, A) \triangleq Q(X, A)-E[Q(X, A) | X]$<br>&emsp; &emsp;&emsp;true treatment effect term: $T_{0}(X, A) \triangleq Q_{0}(X, A)-E[Q_{0}(X, A) | X]$</p>
 <p>&emsp; $\because$  $V(d)=E\left[\frac{1_{A=d(\mathbf{x})}}{\pi(A, \mathbf{x})} Q_{0}(\mathbf{x}, A)\right]=E\left[\sum_{a \in \mathcal{A}} 1_{d(\mathbf{x})=a} Q_{0}(\mathbf{x}, a)\right]=E\left[Q_{0}(\mathbf{x}, d(\mathbf{x}))\right]$</p>
 <p>&emsp; &emsp; $V\left(d_{0}\right)=E\left[Q_{0}\left(\mathbf{x}, d_{0}(\mathbf{x})\right)\right] \leq E\left[\max _{a \in \mathcal{A}} Q_{0}(\mathbf{x}, a)\right]$<br>&emsp; &emsp; $V\left(d_{0}\right) \geq\left.V(d)\right|_{d(\mathbf{x}) \in \arg \max _{a \in \mathcal{A}} Q_{0}(X, a)}=E\left[\max _{a \in \mathcal{A}} Q_{0}(\mathbf{x}, a)\right]$</p>
