@@ -246,6 +246,20 @@ img {
   line-height: 1.68;
 }
 
+.home-page .page-title,
+.life-page .page-title {
+  margin-bottom: 1rem;
+  font-size: clamp(2.15rem, 4.4vw, 3.65rem);
+  line-height: 1;
+}
+
+.home-page .lead,
+.life-page .lead {
+  max-width: 800px;
+  font-size: clamp(0.98rem, 1.45vw, 1.08rem);
+  line-height: 1.52;
+}
+
 .section {
   padding: 2rem 0;
   border-top: 1px solid var(--line);
@@ -509,6 +523,17 @@ img {
     grid-template-columns: 1fr;
     gap: 2.3rem;
     padding-top: 2.4rem;
+  }
+
+  .home-page .page-title,
+  .life-page .page-title {
+    font-size: 2.15rem;
+  }
+
+  .home-page .lead,
+  .life-page .lead {
+    font-size: 1rem;
+    line-height: 1.5;
   }
 
   .profile-card {
