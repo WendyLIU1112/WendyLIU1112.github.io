@@ -34,13 +34,13 @@ paper is published.
 
 ### Life Photos
 
-The initial carousel uses remote editorial placeholder images. To use personal
-photos:
+The carousel uses optimized local photos from the personal `figures` folder:
 
-1. Add five images to `images/moments/`.
-2. Replace each image URL in `life.html` with a local path such as
+1. Add new images to `images/moments/`.
+2. Replace or add each image URL in `life.html` using a local path such as
    `images/moments/badminton.jpg`.
-3. Keep landscape or portrait images at least 1000 pixels wide for best quality.
+3. Resize large originals to a maximum dimension of about 1600 pixels before
+   publishing.
 
 ## Deployment
 

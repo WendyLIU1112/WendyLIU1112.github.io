@@ -28,7 +28,7 @@ body {
     radial-gradient(circle at 86% 6%, rgba(79, 113, 104, 0.09), transparent 28rem),
     var(--paper);
   font-family: var(--sans);
-  line-height: 1.75;
+  line-height: 1.62;
 }
 
 a {
@@ -59,7 +59,7 @@ img {
   align-items: center;
   justify-content: space-between;
   width: min(1180px, calc(100% - 40px));
-  min-height: 72px;
+  min-height: 64px;
   margin: 0 auto;
 }
 
@@ -126,23 +126,23 @@ img {
 .page-shell {
   display: grid;
   grid-template-columns: 280px minmax(0, 1fr);
-  gap: clamp(3rem, 7vw, 7rem);
+  gap: clamp(2.5rem, 5vw, 5rem);
   width: min(1120px, calc(100% - 40px));
   margin: 0 auto;
-  padding: clamp(3.5rem, 7vw, 7rem) 0 5rem;
+  padding: clamp(2.7rem, 5vw, 4.5rem) 0 3.5rem;
 }
 
 .profile-card {
   align-self: start;
   position: sticky;
-  top: 116px;
+  top: 96px;
   text-align: center;
 }
 
 .avatar-wrap {
-  width: 184px;
-  height: 184px;
-  margin: 0 auto 1.6rem;
+  width: 166px;
+  height: 166px;
+  margin: 0 auto 1.25rem;
   overflow: hidden;
   border: 8px solid var(--panel);
   border-radius: 50%;
@@ -159,18 +159,18 @@ img {
 .profile-name {
   margin: 0;
   font-family: var(--serif);
-  font-size: 2rem;
+  font-size: 1.8rem;
   line-height: 1.2;
 }
 
 .profile-role {
-  margin: 0.65rem 0 0;
+  margin: 0.5rem 0 0;
   color: var(--muted);
   font-size: 0.95rem;
 }
 
 .profile-place {
-  margin: 0.15rem 0 1.4rem;
+  margin: 0.1rem 0 1.1rem;
   color: var(--muted);
   font-size: 0.88rem;
 }
@@ -220,7 +220,7 @@ img {
 }
 
 .eyebrow {
-  margin: 0 0 0.7rem;
+  margin: 0 0 0.45rem;
   color: var(--accent);
   font-size: 0.76rem;
   font-weight: 800;
@@ -229,9 +229,9 @@ img {
 }
 
 .page-title {
-  margin: 0 0 2rem;
+  margin: 0 0 1.35rem;
   font-family: var(--serif);
-  font-size: clamp(2.65rem, 7vw, 5.6rem);
+  font-size: clamp(2.45rem, 5.5vw, 4.6rem);
   font-weight: 600;
   letter-spacing: -0.045em;
   line-height: 0.98;
@@ -242,12 +242,12 @@ img {
   margin: 0;
   color: #394443;
   font-family: var(--serif);
-  font-size: clamp(1.14rem, 2vw, 1.35rem);
-  line-height: 1.82;
+  font-size: clamp(1.02rem, 1.7vw, 1.16rem);
+  line-height: 1.68;
 }
 
 .section {
-  padding: 2.7rem 0;
+  padding: 2rem 0;
   border-top: 1px solid var(--line);
 }
 
@@ -257,30 +257,30 @@ img {
 }
 
 .section-title {
-  margin: 0 0 1.4rem;
+  margin: 0 0 1rem;
   font-family: var(--serif);
-  font-size: clamp(1.7rem, 3.4vw, 2.45rem);
+  font-size: clamp(1.45rem, 2.7vw, 2rem);
   line-height: 1.2;
 }
 
 .section p {
   max-width: 760px;
-  margin: 0 0 1.2rem;
+  margin: 0 0 0.85rem;
   color: #465150;
 }
 
 .interest-list {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1rem;
-  margin: 1.7rem 0 0;
+  gap: 0.7rem;
+  margin: 1.1rem 0 0;
   padding: 0;
   list-style: none;
 }
 
 .interest-list li {
   position: relative;
-  padding: 1.1rem 1.2rem 1.1rem 2.75rem;
+  padding: 0.8rem 1rem 0.8rem 2.45rem;
   border: 1px solid var(--line);
   border-radius: 14px;
   background: rgba(255, 255, 255, 0.72);
@@ -288,8 +288,8 @@ img {
 
 .interest-list li::before {
   position: absolute;
-  top: 1.35rem;
-  left: 1.25rem;
+  top: 1.05rem;
+  left: 1.1rem;
   width: 8px;
   height: 8px;
   border: 2px solid var(--accent);
@@ -298,14 +298,13 @@ img {
 }
 
 .publication-note {
-  margin: -0.7rem 0 2.4rem;
+  margin: -0.3rem 0 1.2rem;
   color: var(--muted);
   font-size: 0.9rem;
 }
 
 .publication-list {
-  display: grid;
-  gap: 1rem;
+  display: block;
   margin: 0;
   padding: 0;
   counter-reset: publications;
@@ -314,18 +313,16 @@ img {
 
 .publication-item {
   position: relative;
-  padding: 1.5rem 1.6rem 1.5rem 4.2rem;
-  border: 1px solid var(--line);
-  border-radius: 16px;
-  background: var(--panel);
-  box-shadow: 0 9px 28px rgba(31, 42, 42, 0.05);
+  padding: 1rem 0 1rem 3rem;
+  border-bottom: 1px solid var(--line);
+  background: transparent;
   counter-increment: publications;
 }
 
 .publication-item::before {
   position: absolute;
-  top: 1.35rem;
-  left: 1.35rem;
+  top: 1.05rem;
+  left: 0;
   display: grid;
   width: 2rem;
   height: 2rem;
@@ -339,10 +336,20 @@ img {
 }
 
 .publication-title {
-  margin: 0 0 0.35rem;
+  margin: 0 0 0.25rem;
   font-family: var(--serif);
-  font-size: 1.18rem;
-  line-height: 1.45;
+  font-size: 1.05rem;
+  line-height: 1.38;
+}
+
+.publication-title a {
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.publication-title a:hover {
+  color: var(--accent);
+  text-decoration: underline;
 }
 
 .publication-authors,
@@ -360,53 +367,18 @@ img {
   background: rgba(237, 242, 237, 0.55);
 }
 
-.hobby-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1rem;
-  margin: 1.5rem 0 3rem;
-}
-
-.hobby-card {
-  padding: 1.5rem;
-  border: 1px solid var(--line);
-  border-radius: 16px;
-  background: var(--panel);
-}
-
-.hobby-card span {
-  color: var(--accent);
-  font-size: 1.5rem;
-}
-
-.hobby-card h3 {
-  margin: 0.35rem 0 0.35rem;
-  font-family: var(--serif);
-  font-size: 1.3rem;
-}
-
-.hobby-card p {
-  margin: 0;
-  color: var(--muted);
-  font-size: 0.92rem;
-}
-
 .moments-stage {
   position: relative;
   width: 100%;
-  min-height: 430px;
+  min-height: 390px;
   overflow: hidden;
-  border: 1px solid var(--line);
-  border-radius: 24px;
-  background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.76), rgba(237, 242, 237, 0.78)),
-    var(--soft);
+  background: transparent;
 }
 
 .moments-stage::after {
   position: absolute;
   right: 9%;
-  bottom: 38px;
+  bottom: 24px;
   left: 9%;
   height: 54px;
   border-radius: 50%;
@@ -419,14 +391,14 @@ img {
   --offset: 0;
   --distance: 0;
   position: absolute;
-  top: calc(66px + var(--distance) * 18px);
+  top: calc(42px + var(--distance) * 16px);
   left: 50%;
   z-index: calc(10 - var(--distance));
-  width: min(250px, 42vw);
+  width: min(235px, 42vw);
   aspect-ratio: 4 / 5;
   overflow: hidden;
-  border: 7px solid white;
-  border-radius: 20px;
+  border: 5px solid rgba(255, 255, 255, 0.88);
+  border-radius: 18px;
   background: #cfd8d3;
   box-shadow: 0 18px 35px rgba(31, 42, 42, 0.2);
   opacity: calc(1 - var(--distance) * 0.12);
@@ -491,7 +463,7 @@ img {
   gap: 1rem;
   width: min(1120px, calc(100% - 40px));
   margin: 0 auto;
-  padding: 1.5rem 0 2.5rem;
+  padding: 1.2rem 0 2rem;
   border-top: 1px solid var(--line);
   color: var(--muted);
   font-size: 0.82rem;
@@ -535,8 +507,8 @@ img {
 
   .page-shell {
     grid-template-columns: 1fr;
-    gap: 3rem;
-    padding-top: 3rem;
+    gap: 2.3rem;
+    padding-top: 2.4rem;
   }
 
   .profile-card {
@@ -544,21 +516,20 @@ img {
   }
 
   .avatar-wrap {
-    width: 154px;
-    height: 154px;
+    width: 146px;
+    height: 146px;
   }
 
-  .interest-list,
-  .hobby-grid {
+  .interest-list {
     grid-template-columns: 1fr;
   }
 
   .moments-stage {
-    min-height: 390px;
+    min-height: 350px;
   }
 
   .moment-card {
-    width: min(220px, 58vw);
+    width: min(205px, 58vw);
     transform:
       translateX(calc(-50% + var(--offset) * 58%))
       translateY(calc(var(--distance) * 26px))
