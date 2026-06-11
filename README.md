@@ -23,15 +23,14 @@ Open <http://localhost:8000/>.
 
 ### Profile
 
-Edit the shared profile text in the three HTML files. Replace
-`images/avatar.png` with a real portrait using the same filename.
+Edit the shared profile text in the three HTML files. The current portrait is
+stored at `images/avatar.jpg`.
 
 ### Publications
 
-The publication list is intentionally left unfilled because no verified paper
-list was provided. A ready-to-use HTML template is included as a comment in
-`publications.html`. Only add papers after confirming title, author order, year,
-and links.
+The publication list in `publications.html` is based on `CV-Wenli Liu.pdf`
+(January 2026). Update the page whenever a manuscript changes status or a new
+paper is published.
 
 ### Life Photos
 

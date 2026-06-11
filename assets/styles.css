@@ -209,6 +209,12 @@ img {
   height: 18px;
 }
 
+.scholar-mark {
+  font-family: Georgia, serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
 .content {
   min-width: 0;
 }
@@ -480,13 +486,15 @@ img {
 }
 
 .site-footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
   width: min(1120px, calc(100% - 40px));
   margin: 0 auto;
   padding: 1.5rem 0 2.5rem;
   border-top: 1px solid var(--line);
   color: var(--muted);
   font-size: 0.82rem;
-  text-align: right;
 }
 
 @media (max-width: 800px) {
@@ -556,6 +564,11 @@ img {
       translateY(calc(var(--distance) * 26px))
       rotate(calc(var(--offset) * 5deg))
       scale(calc(1 - var(--distance) * 0.11));
+  }
+
+  .site-footer {
+    flex-direction: column;
+    text-align: center;
   }
 }
 
