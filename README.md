@@ -1,8 +1,12 @@
 # Liu Wenli Academic Homepage
 
-English academic personal website for Liu Wenli. The visual structure is inspired
-by the AcademicPages-style layout of <https://lixintong-thu.github.io/>, while
-the styling and implementation are original.
+English academic personal website for Liu Wenli (刘文丽), Postdoctoral Research
+Fellow in the School of Economics at Singapore Management University.
+
+- Homepage: <https://wendyliu1112.github.io/>
+- Email: <wenliliu@smu.edu.sg>
+- Google Scholar: <https://scholar.google.com/citations?user=JFvxuJkAAAAJ&hl=zh-CN>
+- GitHub: <https://github.com/WendyLIU1112/>
 
 ## Pages
 
